@@ -1,39 +1,43 @@
-// @ts-check
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = {
   title: 'Connected Car Docs',
+
   tagline: 'Connected Car Documentation',
 
   url: 'https://chrisjohn83.github.io',
+
   baseUrl: '/dita-markdown-pipeline/',
 
   favicon: 'img/favicon.ico',
 
-  onBrokenLinks: 'warn',
-markdown: {
-  hooks: {
-    onBrokenMarkdownLinks: 'warn',
-  },
-},
-
   organizationName: 'chrisjohn83',
+
   projectName: 'dita-markdown-pipeline',
+
+  trailingSlash: false,
+
+  onBrokenLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   presets: [
     [
       'classic',
-      {
+      ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
+
         blog: false,
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
+      }),
     ],
   ],
 };
-
-module.exports = config;

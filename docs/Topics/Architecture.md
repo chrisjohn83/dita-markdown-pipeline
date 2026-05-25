@@ -1,3 +1,4 @@
+title: Architecture
 ## Platform Architecture Overview &#123;#concept_qzh_v2j_cjc&#125;
 
 The IoT Connected Car Platform follows a distributed, layered architecture spanning vehicle hardware, edge devices, cloud services, and user applications.

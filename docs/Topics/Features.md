@@ -1,3 +1,4 @@
+title: Features
 # Solution Capabilities of the IoT Control Center &#123;#Untitled .concept&#125;
 
 The IoT Control Center provides a comprehensive set of capabilities covering RF testing, network simulation, end-to-end validation, and production-scale optimization.

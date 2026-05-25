@@ -1,3 +1,4 @@
+title: Challenges
 # Connectivity Challenges in Connected Vehicles &#123;#Untitled .concept&#125;
 
 Modern connected vehicles face a range of technical challenges across wireless standards, signal coexistence, system reliability, and production scalability.
