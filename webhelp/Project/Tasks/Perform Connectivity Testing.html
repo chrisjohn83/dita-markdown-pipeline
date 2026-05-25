@@ -1,0 +1,235 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Validate a vehicle device's wireless connectivity by running RF and protocol tests across simulated 5G, LTE, and satellite (NR-NTN) network conditions. Before performing connectivity testing, ensure: ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="Untitled"/><title>***</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="Tasks/Perform%20Connectivity%20Testing.dita"/><meta name="wh-out-relpath" content="Project/Tasks/Perform Connectivity Testing.html"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-theme.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=20260504200909"/>
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260504200909"></script>
+    <script src="../oxygen-webhelp/app/themes.js?buildId=20260504200909"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260504200909"></script>
+    
+    <script defer="defer" src="../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="Untitled" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e11-mi" data-tocid="tocId-d262e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e66-mi" data-tocid="tocId-d262e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e121-mi" data-tocid="tocId-d262e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../Reference/Supported%20Technologies.html">References</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="">
+    <article class="- topic/topic task/task topic task nested1" aria-labelledby="ariaid-title1" id="task_ez3_xlj_cjc">
+        <h2 class="- topic/title title topictitle2" id="ariaid-title1">Perform Connectivity Testing</h2>
+        
+        <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"> Validate a vehicle device's wireless connectivity by running RF and protocol
+            tests across simulated 5G, LTE, and satellite (NR-NTN) network conditions. </p>
+            <section class="- topic/section task/prereq section prereq" id="task_ez3_xlj_cjc__prereq_fz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__prereq_fz3_xlj_cjc">
+                <p class="- topic/p p">Before performing connectivity testing, ensure:</p>
+                <ul class="- topic/ul ul" id="task_ez3_xlj_cjc__ul_gz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__ul_gz3_xlj_cjc">
+                    <li class="- topic/li li">The device is onboarded and has <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Active</span> status on the
+                        platform.</li>
+                    <li class="- topic/li li">You have <em class="+ topic/ph hi-d/i ph i">Test Engineer</em> or <em class="+ topic/ph hi-d/i ph i">Admin</em> role permissions.</li>
+                    <li class="- topic/li li">The network simulation environment is available and configured.</li>
+                </ul>
+            </section>
+            <section class="- topic/section task/context section context" id="task_ez3_xlj_cjc__context_hz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__context_hz3_xlj_cjc">
+                <p class="- topic/p p"> Connectivity testing validates that a vehicle's wireless modules perform
+                    correctly under a range of simulated network conditions. This includes RF
+                    performance (signal strength, frequency compliance) and protocol behavior (MQTT,
+                    HTTP, gRPC). Tests can be run against simulated 5G, LTE, and satellite
+                    environments without requiring live network access. </p>
+            </section>
+            <section><ol class="- topic/ol task/steps ol steps" id="task_ez3_xlj_cjc__steps_iz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__steps_iz3_xlj_cjc"><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Navigate to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Test Center</span> &gt; <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connectivity
+                            Testing</span>.</span>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Select the target device from the device list.</span>
+                    <div class="- topic/itemgroup task/info itemgroup info">Use the search or filter to locate the device by VIN, Device ID, or fleet
+                        group.</div>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Select the test type to initiate.</span>
+                    <div class="simpletable-container"><table class="- topic/simpletable task/choicetable simpletable choicetable choicetableborder" id="task_ez3_xlj_cjc__choicetable_jz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__choicetable_jz3_xlj_cjc"><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead><tr class="- topic/sthead task/chhead sthead chhead"><th scope="col" class="- topic/stentry task/choptionhd stentry choptionhd">Option</th><th scope="col" class="- topic/stentry task/chdeschd stentry chdeschd">Description</th></tr></thead><tbody><tr class="- topic/strow task/chrow strow chrow">
+                            <th scope="row" class="- topic/stentry task/choption stentry choption">RF Test</th>
+                            <td class="- topic/stentry task/chdesc stentry chdesc">Validates signal strength, frequency accuracy, and emission
+                                levels.</td>
+                        </tr><tr class="- topic/strow task/chrow strow chrow">
+                            <th scope="row" class="- topic/stentry task/choption stentry choption">Protocol Test</th>
+                            <td class="- topic/stentry task/chdesc stentry chdesc">Verifies MQTT, HTTP, and gRPC communication conformance and
+                                reliability.</td>
+                        </tr><tr class="- topic/strow task/chrow strow chrow">
+                            <th scope="row" class="- topic/stentry task/choption stentry choption">Full Connectivity Suite</th>
+                            <td class="- topic/stentry task/chdesc stentry chdesc">Runs both RF and protocol tests sequentially in a single
+                                session.</td>
+                        </tr></tbody></table></div>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Configure the simulated network conditions.</span>
+                    <ol type="a" class="- topic/ol task/substeps ol substeps" id="task_ez3_xlj_cjc__substeps_kz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__substeps_kz3_xlj_cjc">
+                        <li class="- topic/li task/substep li substep">
+                            <span class="- topic/ph task/cmd ph cmd">Select the network type: <span class="+ topic/ph ui-d/uicontrol ph uicontrol">5G NR</span>,
+                                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">LTE</span>, or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Satellite
+                                    (NR-NTN)</span>.</span>
+                        </li>
+                        <li class="- topic/li task/substep li substep">
+                            <span class="- topic/ph task/cmd ph cmd">Set the channel conditions: signal strength (dBm), latency (ms),
+                                and packet loss (%).</span>
+                        </li>
+                        <li class="- topic/li task/substep li substep">
+                            <span class="- topic/ph task/cmd ph cmd">Optionally enable interference simulation for coexistence
+                                testing.</span>
+                        </li>
+                    </ol>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Start Test</span> to begin the test session.</span>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Monitor the live test results in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Test Monitor</span>
+                        panel.</span>
+                    <div class="- topic/itemgroup task/info itemgroup info"> Results display in real time. Key metrics to observe: <ul class="- topic/ul ul" id="task_ez3_xlj_cjc__ul_lz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__ul_lz3_xlj_cjc">
+                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Signal Strength:</strong> Should be within the configured acceptable
+                                range.</li>
+                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Round-Trip Latency:</strong> Should meet the threshold for the
+                                selected network type.</li>
+                            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Packet Loss Rate:</strong> Should remain below the configured
+                                maximum.</li>
+                        </ul>
+                    </div>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Review the test summary report when the session completes.</span>
+                    <div class="- topic/itemgroup task/info itemgroup info">The report includes pass/fail status for each metric and a full trace
+                        log.</div>
+                </li><li class="- topic/li task/step li step stepexpand">
+                    <span class="- topic/ph task/cmd ph cmd">Export the report if required for compliance documentation.</span>
+                    <div class="- topic/itemgroup task/info itemgroup info">Reports can be exported as PDF or CSV from the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Test
+                            History</span> tab.</div>
+                </li></ol></section>
+            <section class="- topic/section task/result section result" id="task_ez3_xlj_cjc__result_mz3_xlj_cjc" data-ofbid="task_ez3_xlj_cjc__result_mz3_xlj_cjc">
+                <p class="- topic/p p"> Device connectivity is validated across the selected network scenarios. A test
+                    report is generated and stored in the platform. Devices that pass all thresholds
+                    are cleared for the next validation stage. </p>
+            </section>
+        </div>
+        
+    </article>
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/concepts/concept-features.html" title="The IoT Control Center provides a comprehensive set of capabilities covering RF testing, network simulation, end-to-end validation, and production-scale optimization.">Solution Capabilities Overview</a><div class="- topic/desc desc">     The IoT Control Center provides a comprehensive set of capabilities covering RF testing,     network simulation, end-to-end validation, and production-scale optimization.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/reference/ref-technologies.html" title="Reference list of all wireless standards, communication protocols, API types, and data storage technologies supported by the IoT Connected Car Platform.">Supported Technologies</a><div class="- topic/desc desc">     Reference list of all wireless standards, communication protocols, API types, and data     storage technologies supported by the IoT Connected Car Platform.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/reference/ref-troubleshooting.html" title="Common issues encountered on the IoT Connected Car Platform, their likely causes, and recommended resolutions.">Troubleshooting Guide</a><div class="- topic/desc desc">     Common issues encountered on the IoT Connected Car Platform, their likely causes,     and recommended resolutions.   </div></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

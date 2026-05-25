@@ -1,0 +1,267 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The IoT Connected Car Platform follows a distributed, layered architecture spanning vehicle hardware, edge devices, cloud services, and user applications. The platform is organized into six ..."/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="concept"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="Untitled"/><title>***</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="Topics/Architecture.dita"/><meta name="wh-out-relpath" content="Project/Topics/Architecture.html"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-theme.css?buildId=20260525081813"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=20260525081813"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=20260525081813"/>
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260525081813"></script>
+    <script src="../oxygen-webhelp/app/themes.js?buildId=20260525081813"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260525081813"></script>
+    
+    <script defer="defer" src="../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="Untitled" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d271e11-mi" data-tocid="tocId-d271e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d271e66-mi" data-tocid="tocId-d271e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d271e121-mi" data-tocid="tocId-d271e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../Reference/Supported%20Technologies.html">References</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d271e167-mi" data-tocid="tocId-d271e167" data-state="not-ready" class=" topicref "><span class="title"><a href="../maintenance/ref-maintenance-telemetry.html">Use Case 3: Predictive Maintenance</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-xxl-10 col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic concept/concept topic concept" role="article" aria-labelledby="">
+    <article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="ariaid-title1" id="concept_qzh_v2j_cjc">
+        <h2 class="- topic/title title topictitle2" id="ariaid-title1">Platform Architecture Overview</h2>
+        
+        <div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"> The IoT Connected Car Platform follows a distributed, layered architecture
+            spanning vehicle hardware, edge devices, cloud services, and user applications. </p>
+            <p class="- topic/p p"> The platform is organized into six architectural layers. Each layer has a
+                well-defined responsibility and communicates with adjacent layers through
+                standardized interfaces. This separation of concerns enables independent scaling,
+                testing, and evolution of each component. </p>
+            <section class="- topic/section section" id="concept_qzh_v2j_cjc__section_rzh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__section_rzh_v2j_cjc"><h3 class="- topic/title title sectiontitle">Architectural Layers</h3>
+                
+                <dl class="- topic/dl dl" id="concept_qzh_v2j_cjc__dl_szh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__dl_szh_v2j_cjc">
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 1 — Vehicle / TCU</dt>
+                        <dd class="- topic/dd dd"> The physical vehicle layer comprising sensors, ECUs (Electronic Control
+                            Units), and the Telematics Control Unit (TCU). The TCU acts as the edge
+                            gateway, aggregating sensor data and relaying commands from the cloud.
+                        </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 2 — Wireless Modules</dt>
+                        <dd class="- topic/dd dd"> Handles RF communication using UWB, 5G NR, and satellite (NR-NTN)
+                            protocols. Manages connectivity handoff, signal quality monitoring, and
+                            coexistence between wireless technologies. </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 3 — Data Processing Layer</dt>
+                        <dd class="- topic/dd dd"> A cloud-hosted streaming and rules engine. Receives raw telemetry,
+                            applies normalization and enrichment, evaluates alert rules, and routes
+                            data to the appropriate storage or notification channel. </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 4 — Storage Layer</dt>
+                        <dd class="- topic/dd dd"> Persists telemetry data in a time-series database optimized for
+                            high-frequency writes and range queries. Supports long-term retention
+                            for trend analysis and compliance. </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 5 — IoT Control Center</dt>
+                        <dd class="- topic/dd dd"> The core platform services layer. Contains the Device Registry, Command
+                            Service, and Telemetry Service. Provides the central orchestration point
+                            for all platform operations. </dd>
+                    
+                    
+                        <dt class="- topic/dt dt dlterm">Layer 6 — API Gateway and User Applications</dt>
+                        <dd class="- topic/dd dd"> Exposes REST and GraphQL APIs for external consumers. Serves mobile
+                            apps, web portals, and third-party integrations. Enforces
+                            authentication, rate limiting, and versioning. </dd>
+                    
+                </dl>
+            </section>
+            <section class="- topic/section section" id="concept_qzh_v2j_cjc__section_tzh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__section_tzh_v2j_cjc"><h3 class="- topic/title title sectiontitle">Component Responsibilities</h3>
+                
+                <div class="simpletable-container"><table class="- topic/simpletable simpletable" id="concept_qzh_v2j_cjc__simpletable_uzh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__simpletable_uzh_v2j_cjc"><colgroup><col style="width:25%"/><col style="width:25%"/><col style="width:50%"/></colgroup><thead><tr class="- topic/sthead sthead">
+                        <th class="- topic/stentry stentry" scope="col" id="concept_qzh_v2j_cjc__simpletable_uzh_v2j_cjc__stentry__1">Component</th>
+                        <th class="- topic/stentry stentry" scope="col" id="concept_qzh_v2j_cjc__simpletable_uzh_v2j_cjc__stentry__2">Layer</th>
+                        <th class="- topic/stentry stentry" scope="col" id="concept_qzh_v2j_cjc__simpletable_uzh_v2j_cjc__stentry__3">Responsibility</th>
+                    </tr></thead><tbody><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">TCU / Edge Device</td>
+                        <td class="- topic/stentry stentry">Vehicle</td>
+                        <td class="- topic/stentry stentry">Sensor aggregation, command relay, local edge processing</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">MQTT Broker</td>
+                        <td class="- topic/stentry stentry">Connectivity</td>
+                        <td class="- topic/stentry stentry">Lightweight publish-subscribe messaging between device and
+                            cloud</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">API Gateway</td>
+                        <td class="- topic/stentry stentry">Platform</td>
+                        <td class="- topic/stentry stentry">Authentication, routing, rate limiting, API versioning</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">Device Registry</td>
+                        <td class="- topic/stentry stentry">Platform</td>
+                        <td class="- topic/stentry stentry">Stores device identity, credentials, and status</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">Command Service</td>
+                        <td class="- topic/stentry stentry">Platform</td>
+                        <td class="- topic/stentry stentry">Routes, queues, delivers, and acknowledges remote
+                            commands</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">Telemetry Service</td>
+                        <td class="- topic/stentry stentry">Platform</td>
+                        <td class="- topic/stentry stentry">Ingests, normalizes, and processes vehicle telemetry
+                            streams</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">Time-Series DB</td>
+                        <td class="- topic/stentry stentry">Storage</td>
+                        <td class="- topic/stentry stentry">High-frequency telemetry persistence and range queries</td>
+                    </tr><tr class="- topic/strow strow">
+                        <td class="- topic/stentry stentry">Mobile / Web App</td>
+                        <td class="- topic/stentry stentry">Application</td>
+                        <td class="- topic/stentry stentry">User-facing interface for monitoring and remote control</td>
+                    </tr></tbody></table></div>
+            </section>
+            <section class="- topic/section section" id="concept_qzh_v2j_cjc__section_vzh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__section_vzh_v2j_cjc"><h3 class="- topic/title title sectiontitle">Design Principles</h3>
+                
+                <ul class="- topic/ul ul" id="concept_qzh_v2j_cjc__ul_wzh_v2j_cjc" data-ofbid="concept_qzh_v2j_cjc__ul_wzh_v2j_cjc">
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Loose coupling:</strong> Each layer communicates via published interfaces
+                        only.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Horizontal scalability:</strong> Cloud services scale independently under
+                        load.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Security by design:</strong> TLS and certificate-based auth at every
+                        boundary.</li>
+                    <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Observability:</strong> All service interactions produce structured audit
+                        logs.</li>
+                </ul>
+            </section>
+        </div>
+        
+    </article>
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/concepts/concept-dataflow.html" title="Platform Data Flow">Platform Data Flow</a></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/reference/ref-technologies.html" title="Supported Technologies">Supported Technologies</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-xxl-2 col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+              	                <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+		                            <span class="close-toc-icon-container">
+		                                <span class="close-toc-icon"></span>     
+		                            </span>
+		                        </button>
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#concept_qzh_v2j_cjc" data-tocid="concept_qzh_v2j_cjc">Platform Architecture Overview</a><ul><li class="section-item"><div class="section-title"><a href="#concept_qzh_v2j_cjc__section_rzh_v2j_cjc" data-tocid="concept_qzh_v2j_cjc__section_rzh_v2j_cjc">Architectural Layers</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_qzh_v2j_cjc__section_tzh_v2j_cjc" data-tocid="concept_qzh_v2j_cjc__section_tzh_v2j_cjc">Component Responsibilities</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_qzh_v2j_cjc__section_vzh_v2j_cjc" data-tocid="concept_qzh_v2j_cjc__section_vzh_v2j_cjc">Design Principles</a></div></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

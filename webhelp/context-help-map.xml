@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="Untitled" path="Topics/Overview.html"/>
+   <appContext helpID="Untitled" path="Topics/Challenges.html"/>
+   <appContext helpID="Untitled" path="Topics/Features.html"/>
+   <appContext helpID="Untitled" path="Topics/Architecture.html"/>
+   <appContext helpID="Untitled" path="Topics/dataflow.html"/>
+   <appContext helpID="Untitled" path="Tasks/Device_Onboarding.html"/>
+   <appContext helpID="Untitled" path="Tasks/Perform%20Connectivity%20Testing.html"/>
+   <appContext helpID="e_2_e_validation" path="Tasks/e_2_e_validation.html"/>
+   <appContext helpID="Untitled" path="Tasks/task-remote-operations.html"/>
+   <appContext helpID="task_production_testing"
+               path="Tasks/task_production_testing.html"/>
+   <appContext helpID="reference_wwv_qfj_cjc"
+               path="Reference/Supported%20Technologies.html"/>
+   <appContext helpID="Untitled1" path="Reference/Key%20Features%20Reference.html"/>
+   <appContext helpID="Untitled" path="Reference/Platform%20Benefits.html"/>
+   <appContext helpID="Untitled" path="Reference/Troubleshooting.html"/>
+   <appContext helpID="" path="maintenance/ref-maintenance-telemetry.html"/>
+   <appContext helpID="" path="maintenance/ref-maintenance-health-score.html"/>
+   <appContext helpID="" path="maintenance/ref-maintenance-alerts.html"/>
+</map>

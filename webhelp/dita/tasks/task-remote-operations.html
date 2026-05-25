@@ -1,0 +1,237 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="description" content="Send a remote command to a connected vehicle and track its execution through the full command lifecycle from dispatch to acknowledgment."/><meta name="DC.relation" content="../concepts/concept-dataflow.html"/><meta name="DC.relation" content="../reference/ref-troubleshooting.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="task-remote-operations"/>        
+      <title>Execute Remote Commands on a Vehicle</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../../Project/"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="../dita/tasks/task-remote-operations.dita"/><meta name="wh-out-relpath" content="dita/tasks/task-remote-operations.html"/>
+    <link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/template/oxygen-theme.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/template/oxygen.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../../Project/oxygen-webhelp/template/notes.css?buildId=20260504200909"/>
+    <script src="../../Project/oxygen-webhelp/app/options/properties.js?buildId=20260504200909"></script>
+    <script src="../../Project/oxygen-webhelp/app/themes.js?buildId=20260504200909"></script>
+    <script src="../../Project/oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../../Project/oxygen-webhelp/app/search/index/keywords.js?buildId=20260504200909"></script>
+    
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../../Project/oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="task-remote-operations" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../../Project/index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e11-mi" data-tocid="tocId-d262e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Project/Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e66-mi" data-tocid="tocId-d262e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Project/Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e121-mi" data-tocid="tocId-d262e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Project/Reference/Supported%20Technologies.html">References</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../Project/search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="ariaid-title1">
+  <h1 class="- topic/title title topictitle1" id="ariaid-title1">Execute Remote Commands on a Vehicle</h1>
+  
+  <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">
+    Send a remote command to a connected vehicle and track its execution through the full
+    command lifecycle from dispatch to acknowledgment.
+  </p>
+
+    <section class="- topic/section task/prereq section prereq">
+      <p class="- topic/p p">Before executing remote commands:</p>
+      <ul class="- topic/ul ul">
+        <li class="- topic/li li">The target vehicle must be onboarded and in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Active</span> status.</li>
+        <li class="- topic/li li">Your account must have the <em class="+ topic/ph hi-d/i ph i">Vehicle Owner</em>, <em class="+ topic/ph hi-d/i ph i">Fleet Manager</em>, or <em class="+ topic/ph hi-d/i ph i">Admin</em> role.</li>
+        <li class="- topic/li li">The vehicle must be within network coverage (cellular or satellite).</li>
+        <li class="- topic/li li">Safety constraints must be satisfied (e.g., vehicle must be stationary to unlock doors).</li>
+      </ul>
+    </section>
+
+    <section class="- topic/section task/context section context">
+      <p class="- topic/p p">
+        Remote operations allow authorized users to send commands to their vehicle from
+        anywhere through the mobile app or web portal. Every command is authorized, safety-
+        checked, queued, and delivered asynchronously. The platform tracks each command
+        through its full lifecycle and notifies the user of the outcome.
+      </p>
+    </section>
+
+    <section><ol class="- topic/ol task/steps ol steps"><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Open the vehicle dashboard in the mobile app or web portal.</span>
+        <div class="- topic/itemgroup task/info itemgroup info">Select the target vehicle from your vehicle list if you manage multiple vehicles.</div>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Tap or click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remote Operations</span>.</span>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Select the command to execute.</span>
+        <div class="simpletable-container"><table class="- topic/simpletable task/choicetable simpletable choicetable choicetableborder"><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead><tr class="- topic/sthead task/chhead sthead chhead"><th scope="col" class="- topic/stentry task/choptionhd stentry choptionhd">Option</th><th scope="col" class="- topic/stentry task/chdeschd stentry chdeschd">Description</th></tr></thead><tbody><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Lock Doors</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Remotely locks all vehicle doors. No safety precondition required.</td>
+          </tr><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Unlock Doors</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Remotely unlocks doors. Vehicle must be stationary (speed = 0 km/h).</td>
+          </tr><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Engine Start</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Starts the engine remotely for pre-conditioning. Safety checks applied.</td>
+          </tr><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Engine Stop</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Stops the engine. Blocked if vehicle is in motion.</td>
+          </tr><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Horn</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Briefly sounds the horn to help locate the vehicle.</td>
+          </tr><tr class="- topic/strow task/chrow strow chrow">
+            <th scope="row" class="- topic/stentry task/choption stentry choption">Flash Lights</th>
+            <td class="- topic/stentry task/chdesc stentry chdesc">Flashes the headlights to help locate the vehicle.</td>
+          </tr></tbody></table></div>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Confirm the command in the confirmation dialog.</span>
+        <div class="- topic/itemgroup task/info itemgroup info">
+          A confirmation prompt appears for commands that affect safety (e.g., engine start/stop).
+          Review the details and tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm</span>.
+        </div>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Tap <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Send Command</span>.</span>
+        <div class="- topic/itemgroup task/info itemgroup info">The command is submitted to the platform and enters the delivery queue.</div>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Track the execution status in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Command Status</span> panel.</span>
+        <div class="- topic/itemgroup task/info itemgroup info">
+          The status progresses through the following states:
+          <ul class="- topic/ul ul">
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Sent:</strong> Command has been queued in the platform.</li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Delivered:</strong> Command has reached the vehicle's TCU.</li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Executed:</strong> Vehicle has confirmed successful execution.</li>
+            <li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">Failed:</strong> Command could not be delivered or executed (reason displayed).</li>
+          </ul>
+        </div>
+      </li><li class="- topic/li task/step li step stepexpand">
+        <span class="- topic/ph task/cmd ph cmd">Acknowledge the push notification confirming the command outcome.</span>
+      </li></ol></section>
+
+    <section class="- topic/section task/result section result">
+      <p class="- topic/p p">
+        The selected command is successfully executed on the vehicle. A confirmation
+        notification is sent to the user, and the command is recorded in the Command History
+        log with timestamp, user, command type, and outcome.
+      </p>
+    </section>
+
+    <section class="- topic/section task/postreq section postreq">
+      <p class="- topic/p p">To review a history of all commands sent to the vehicle, navigate to
+      <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remote Operations</span> &gt; <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Command History</span>.</p>
+    </section>
+
+  </div>
+
+  
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../concepts/concept-dataflow.html" title="Data in the IoT Connected Car Platform travels from vehicle sensors through edge devices, cloud processing, and storage layers before reaching user applications and dashboards.">Platform Data Flow</a><div class="- topic/desc desc">     Data in the IoT Connected Car Platform travels from vehicle sensors through edge devices,     cloud processing, and storage layers before reaching user applications and dashboards.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../reference/ref-troubleshooting.html" title="Common issues encountered on the IoT Connected Car Platform, their likely causes, and recommended resolutions.">Troubleshooting Guide</a><div class="- topic/desc desc">     Common issues encountered on the IoT Connected Car Platform, their likely causes,     and recommended resolutions.   </div></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

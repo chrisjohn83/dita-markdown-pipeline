@@ -1,0 +1,34 @@
+# IoT Connected Car Platform
+
+-   Getting Started
+    -   [Connected Car Platform Overview](Topics/Overview.md)
+    -   [Connectivity Challenges in Connected Vehicles](Topics/Challenges.md)
+    -   [Solution Capabilities of the IoT Control Center](Topics/Features.md)
+    -   [Platform Data Flow](Topics/dataflow.md)
+-   Authentication
+    -   [API Authentication](auth/ref-api-authentication.md)
+-   Use Case 1: Fleet Management
+    -   Fleet Management — API Reference
+        -   [GET /fleet/vehicles — List All Fleet Vehicles](API/fleet/ref-fleet-list-vehicles.md)
+        -   [GET /fleet/vehicles/\{vehicleId\}/status — Get Vehicle Status](API/fleet/ref-fleet-vehicle-status.md)
+        -   [Fleet Group Management APIs](API/fleet/ref-fleet-group-management.md)
+    -   Fleet Management — How-To Tasks
+        -   [Monitor Fleet Vehicles in Real Time](API/fleet/task-fleet-monitor-vehicles.md)
+        -   [Maintenance Alert APIs — GET and POST](API/maintenance/ref-maintenance-alerts.md)
+-   Use Case 2: Remote Operations
+    -   Remote Operations — API Reference
+        -   [Send Remote Command](remote/ref-remote-send-command.md)
+        -   [Get Command Status and History](remote/ref-remote-command-status.md)
+        -   [Schedule a Remote Command](remote/ref-remote-schedule-command.md)
+    -   Remote Operations — How-To Tasks
+        -   [Issue and Track a Remote Command](remote/task-remote-issue-command.md)
+        -   [Schedule a Recurring Command](remote/task-remote-schedule-command.md)
+-   Use Case 3: Predictive Maintenance
+    -   Predictive Maintenance — API Reference
+        -   [Query Telemetry History](maintenance/ref-maintenance-telemetry.md)
+        -   [Get Vehicle Health Score](maintenance/ref-maintenance-health-score.md)
+        -   [Maintenance Alerts and Alert Rules](maintenance/ref-maintenance-alerts.md)
+    -   Predictive Maintenance — How-To Tasks
+        -   [Monitor Telemetry Trends](maintenance/task-maintenance-monitor-trends.md)
+        -   [Configure Maintenance Alert Rules](maintenance/task-maintenance-configure-alerts.md)
+

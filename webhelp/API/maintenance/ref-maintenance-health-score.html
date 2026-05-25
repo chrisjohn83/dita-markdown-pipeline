@@ -1,0 +1,272 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="reference"/><meta name="description" content="Returns a composite predictive health score for the vehicle, derived from telemetry trends across engine, battery, tyres, and brakes — enabling proactive maintenance decisions."/><meta name="DC.relation" content="ref-maintenance-telemetry.html"/><meta name="DC.relation" content="ref-maintenance-alerts.html"/><meta name="DC.relation" content="task-maintenance-monitor-trends.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="ref-maintenance-health-score"/>        
+      <title>GET /vehicles/{vehicleId}/health — Get Vehicle Health Score</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="API/maintenance/ref-maintenance-health-score.dita"/><meta name="wh-out-relpath" content="Project/API/maintenance/ref-maintenance-health-score.html"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen-theme.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/notes.css?buildId=20260524230819"/>
+    <script src="../../oxygen-webhelp/app/options/properties.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/themes.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../../oxygen-webhelp/app/search/index/keywords.js?buildId=20260524230819"></script>
+    
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="ref-maintenance-health-score" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e11-mi" data-tocid="tocId-d323e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e66-mi" data-tocid="tocId-d323e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e121-mi" data-tocid="tocId-d323e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Reference/Supported%20Technologies.html">References</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e167-mi" data-tocid="tocId-d323e167" data-state="not-ready" class=" topicref "><span class="title"><a href="../../auth/ref-api-authentication.html">Authentication</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e179-mi" data-tocid="tocId-d323e179" data-state="not-ready" class=" topicref "><span class="title"><a href="../../API/fleet/ref-fleet-list-vehicles.html">Use Case 1: Fleet Management</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e238-mi" data-tocid="tocId-d323e238" data-state="not-ready" class=" topicref "><span class="title"><a href="../../maintenance/ref-maintenance-telemetry.html">Use Case 3: Predictive Maintenance</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic       reference/reference topic reference" role="article" aria-labelledby="ariaid-title1">
+  <h1 class="- topic/title title topictitle1" id="ariaid-title1">GET /vehicles/{vehicleId}/health — Get Vehicle Health Score</h1>
+  
+  <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc">
+    Returns a composite predictive health score for the vehicle, derived from telemetry
+    trends across engine, battery, tyres, and brakes — enabling proactive maintenance decisions.
+  </p>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Endpoint</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:25%"/><col style="width:75%"/></colgroup><tbody><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Method</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">GET</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">URI Path</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">https://api.connectedcar.io/v1/vehicles/{vehicleId}/health</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Auth Scope</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">telemetry:read</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Rate Limit</strong></td><td class="- topic/stentry stentry">60 requests / minute per tenant</td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Score Refresh</strong></td><td class="- topic/stentry stentry">Health scores are recalculated every 4 hours from rolling telemetry data.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Authentication</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Authorization: Bearer {access_token}
+X-Tenant-ID: {tenant_id}</code></pre>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Health Score Interpretation</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:25%"/><col style="width:25%"/><col style="width:50%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__11">Score Range</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__12">Grade</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__13">Recommended Action</th>
+        </tr></thead><tbody><tr class="- topic/strow strow"><td class="- topic/stentry stentry">90–100</td><td class="- topic/stentry stentry">Excellent</td><td class="- topic/stentry stentry">No action required. Continue standard service intervals.</td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry">75–89</td><td class="- topic/stentry stentry">Good</td><td class="- topic/stentry stentry">Monitor flagged components at next scheduled service.</td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry">60–74</td><td class="- topic/stentry stentry">Fair</td><td class="- topic/stentry stentry">Schedule a service inspection within 30 days.</td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry">40–59</td><td class="- topic/stentry stentry">Poor</td><td class="- topic/stentry stentry">Schedule urgent service within 7 days.</td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry">0–39</td><td class="- topic/stentry stentry">Critical</td><td class="- topic/stentry stentry">Immediate service required. Consider removing vehicle from service.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Sample Request</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>GET /v1/vehicles/veh_X7K2M9P1/health HTTP/1.1
+Host: api.connectedcar.io
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
+X-Tenant-ID: tenant_abc123
+Accept: application/json</code></pre>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Sample Response — 200 OK</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{
+  "status": "success",
+  "data": {
+    "vehicle_id": "veh_X7K2M9P1",
+    "vin": "1HGCM82633A004352",
+    "overall_health_score": 74,
+    "grade": "Fair",
+    "recommendation": "Schedule service inspection within 30 days.",
+    "score_calculated_at": "2026-04-30T06:00:00Z",
+    "components": {
+      "engine": {
+        "score": 82,
+        "grade": "Good",
+        "indicators": {
+          "coolant_temp_trend": "stable",
+          "oil_pressure_trend": "declining",
+          "runtime_hours": 1842,
+          "last_service_km_ago": 8200
+        },
+        "flag": "Oil pressure declining — inspect at next service."
+      },
+      "battery": {
+        "score": 91,
+        "grade": "Excellent",
+        "indicators": {
+          "voltage_v": 12.7,
+          "charge_cycles": 312,
+          "health_percent": 92
+        },
+        "flag": null
+      },
+      "brakes": {
+        "score": 68,
+        "grade": "Fair",
+        "indicators": {
+          "front_pad_wear_percent": 62,
+          "rear_pad_wear_percent": 58,
+          "harsh_braking_events_30d": 14
+        },
+        "flag": "Brake pad wear exceeding threshold — inspect within 2 weeks."
+      },
+      "tyres": {
+        "score": 55,
+        "grade": "Poor",
+        "indicators": {
+          "front_left_pressure_kpa": 198,
+          "front_right_pressure_kpa": 201,
+          "rear_left_pressure_kpa": 178,
+          "rear_right_pressure_kpa": 195
+        },
+        "flag": "Rear-left tyre pressure critically low — immediate inspection required."
+      }
+    },
+    "predicted_failure_risk": {
+      "next_30_days_percent": 18,
+      "next_90_days_percent": 42,
+      "highest_risk_component": "tyres"
+    },
+    "maintenance_due": [
+      { "service": "Oil change", "due_km": 1800, "due_date_estimate": "2026-06-15" },
+      { "service": "Brake inspection", "due_km": null, "due_date_estimate": "2026-05-14" },
+      { "service": "Tyre pressure check", "due_km": null, "due_date_estimate": "2026-05-01" }
+    ]
+  },
+  "request_id": "g7h8i9j0-k1l2-3456-ghij-567890123456",
+  "timestamp": "2026-04-30T10:05:00Z"
+}</code></pre>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Error Codes</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:15.686274509803924%"/><col style="width:25.490196078431378%"/><col style="width:39.21568627450981%"/><col style="width:19.607843137254903%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__29">HTTP Status</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__30">Error Code</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__31">Description</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-health-score__stentry__32">Resolution</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">404</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">VEHICLE_NOT_FOUND</code></td>
+          <td class="- topic/stentry stentry">Vehicle ID not found in tenant.</td>
+          <td class="- topic/stentry stentry">Verify the vehicle ID.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">404</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INSUFFICIENT_TELEMETRY</code></td>
+          <td class="- topic/stentry stentry">Not enough telemetry data to compute a health score (vehicle onboarded too recently).</td>
+          <td class="- topic/stentry stentry">Health score available after 24 hours of telemetry collection.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">403</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INSUFFICIENT_SCOPE</code></td>
+          <td class="- topic/stentry stentry">Token missing <code class="+ topic/ph pr-d/codeph ph codeph">telemetry:read</code> scope.</td>
+          <td class="- topic/stentry stentry">Re-authorize with correct scope.</td>
+        </tr></tbody></table></div>
+    </section>
+
+  </div>
+  
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-maintenance-telemetry.html" title="Retrieves historical telemetry records for a vehicle over a specified time range. Used for trend analysis, predictive maintenance modelling, and usage reporting.">Query Telemetry History</a><div class="- topic/desc desc">     Retrieves historical telemetry records for a vehicle over a specified time range.     Used for trend analysis, predictive maintenance modelling, and usage reporting.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-maintenance-alerts.html" title="Retrieve active maintenance alerts for a vehicle and create custom alert rules that trigger when telemetry thresholds are exceeded.">GET/POST Maintenance Alerts</a><div class="- topic/desc desc">     Retrieve active maintenance alerts for a vehicle and create custom alert rules     that trigger when telemetry thresholds are exceeded.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="task-maintenance-monitor-trends.html" title="Use the Telemetry and Health Score APIs to retrieve historical data, identify deteriorating component trends, and take proactive maintenance action before a failure occurs.">Task: Monitor Telemetry Trends</a><div class="- topic/desc desc">     Use the Telemetry and Health Score APIs to retrieve historical data, identify     deteriorating component trends, and take proactive maintenance action before     a failure occurs.   </div></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

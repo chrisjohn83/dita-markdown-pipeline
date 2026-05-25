@@ -1,0 +1,290 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="reference"/><meta name="description" content="Retrieves a paginated list of all vehicles registered to the authenticated tenant's fleet, with optional filters for status, group, and vehicle type."/><meta name="DC.relation" content="ref-fleet-vehicle-status.html"/><meta name="DC.relation" content="ref-fleet-group-management.html"/><meta name="DC.relation" content="../auth/ref-api-authentication.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="ref-fleet-list-vehicles"/>        
+      <title>GET /fleet/vehicles — List All Fleet Vehicles</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="API/fleet/ref-fleet-list-vehicles.dita"/><meta name="wh-out-relpath" content="Project/API/fleet/ref-fleet-list-vehicles.html"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen-theme.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/notes.css?buildId=20260524230819"/>
+    <script src="../../oxygen-webhelp/app/options/properties.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/themes.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../../oxygen-webhelp/app/search/index/keywords.js?buildId=20260524230819"></script>
+    
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="ref-fleet-list-vehicles" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e11-mi" data-tocid="tocId-d323e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e66-mi" data-tocid="tocId-d323e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e121-mi" data-tocid="tocId-d323e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Reference/Supported%20Technologies.html">References</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e167-mi" data-tocid="tocId-d323e167" data-state="not-ready" class=" topicref "><span class="title"><a href="../../auth/ref-api-authentication.html">Authentication</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e179-mi" data-tocid="tocId-d323e179" data-state="not-ready" class=" topicref "><span class="title"><a href="../../API/fleet/ref-fleet-list-vehicles.html">Use Case 1: Fleet Management</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e238-mi" data-tocid="tocId-d323e238" data-state="not-ready" class=" topicref "><span class="title"><a href="../../maintenance/ref-maintenance-telemetry.html">Use Case 3: Predictive Maintenance</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic       reference/reference topic reference" role="article" aria-labelledby="ariaid-title1">
+  <h1 class="- topic/title title topictitle1" id="ariaid-title1">GET /fleet/vehicles — List All Fleet Vehicles</h1>
+  
+  <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc">
+    Retrieves a paginated list of all vehicles registered to the authenticated tenant's fleet,
+    with optional filters for status, group, and vehicle type.
+  </p>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Endpoint</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:25%"/><col style="width:75%"/></colgroup><tbody><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Method</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">GET</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">URI Path</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">https://api.connectedcar.io/v1/fleet/vehicles</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Auth Scope</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">fleet:read</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Rate Limit</strong></td><td class="- topic/stentry stentry">120 requests / minute per tenant</td></tr></tbody></table></div>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Authentication</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Authorization: Bearer {access_token}
+X-Tenant-ID: {tenant_id}</code></pre>
+      <p class="- topic/p p">See <a class="- topic/xref xref" href="../auth/ref-api-authentication.html">API Authentication</a>
+      for token acquisition details.</p>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Query Parameters</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:21.73913043478261%"/><col style="width:17.39130434782609%"/><col style="width:17.39130434782609%"/><col style="width:43.47826086956522%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__9">Parameter</th><th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__10">Type</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__11">Required</th><th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__12">Description</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">status</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Filter by vehicle status. Values: <code class="+ topic/ph pr-d/codeph ph codeph">active</code>, <code class="+ topic/ph pr-d/codeph ph codeph">inactive</code>, <code class="+ topic/ph pr-d/codeph ph codeph">maintenance</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">group_id</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Filter vehicles belonging to a specific fleet group.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">page</code></td><td class="- topic/stentry stentry">integer</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Page number, 1-based. Default: <code class="+ topic/ph pr-d/codeph ph codeph">1</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">limit</code></td><td class="- topic/stentry stentry">integer</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Records per page. Default: <code class="+ topic/ph pr-d/codeph ph codeph">50</code>. Max: <code class="+ topic/ph pr-d/codeph ph codeph">200</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">sort</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Sort field. Values: <code class="+ topic/ph pr-d/codeph ph codeph">vin</code>, <code class="+ topic/ph pr-d/codeph ph codeph">last_seen</code>, <code class="+ topic/ph pr-d/codeph ph codeph">status</code>. Default: <code class="+ topic/ph pr-d/codeph ph codeph">last_seen</code>.</td>
+        </tr></tbody></table></div>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Sample Request</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>GET /v1/fleet/vehicles?status=active&amp;page=1&amp;limit=3 HTTP/1.1
+Host: api.connectedcar.io
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
+X-Tenant-ID: tenant_abc123
+X-Request-ID: 7f3d9c2a-1b4e-4f8a-9d2c-3e5f7a1b9e4d
+Accept: application/json</code></pre>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Sample Response — 200 OK</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{
+  "status": "success",
+  "data": {
+    "vehicles": [
+      {
+        "vehicle_id": "veh_X7K2M9P1",
+        "vin": "1HGCM82633A004352",
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2023,
+        "status": "active",
+        "group_id": "grp_fleet_north",
+        "group_name": "North Region Fleet",
+        "last_seen": "2026-04-30T08:14:22Z",
+        "location": {
+          "latitude": 37.7749,
+          "longitude": -122.4194,
+          "address": "San Francisco, CA, USA"
+        },
+        "connectivity": {
+          "signal_type": "5G",
+          "signal_strength_dbm": -72,
+          "online": true
+        }
+      },
+      {
+        "vehicle_id": "veh_A3N8Q5R7",
+        "vin": "2T1BURHE0JC054321",
+        "make": "Ford",
+        "model": "Transit",
+        "year": 2022,
+        "status": "active",
+        "group_id": "grp_fleet_north",
+        "group_name": "North Region Fleet",
+        "last_seen": "2026-04-30T08:10:05Z",
+        "location": {
+          "latitude": 37.3382,
+          "longitude": -121.8863,
+          "address": "San Jose, CA, USA"
+        },
+        "connectivity": {
+          "signal_type": "LTE",
+          "signal_strength_dbm": -85,
+          "online": true
+        }
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "limit": 3,
+      "total_records": 142,
+      "total_pages": 48,
+      "next_page": "/v1/fleet/vehicles?status=active&amp;page=2&amp;limit=3"
+    }
+  },
+  "request_id": "7f3d9c2a-1b4e-4f8a-9d2c-3e5f7a1b9e4d",
+  "timestamp": "2026-04-30T08:15:00Z"
+}</code></pre>
+    </section>
+
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Error Codes</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:16%"/><col style="width:24%"/><col style="width:40%"/><col style="width:20%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__33">HTTP Status</th><th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__34">Error Code</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__35">Description</th><th class="- topic/stentry stentry" scope="col" id="ref-fleet-list-vehicles__stentry__36">Resolution</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">400</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INVALID_QUERY_PARAM</code></td>
+          <td class="- topic/stentry stentry">An unrecognized or malformed query parameter was supplied.</td>
+          <td class="- topic/stentry stentry">Review query parameter names and value formats.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">401</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">TOKEN_EXPIRED</code></td>
+          <td class="- topic/stentry stentry">Bearer token has expired.</td>
+          <td class="- topic/stentry stentry">Refresh the access token and retry.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">403</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INSUFFICIENT_SCOPE</code></td>
+          <td class="- topic/stentry stentry">Token missing <code class="+ topic/ph pr-d/codeph ph codeph">fleet:read</code> scope.</td>
+          <td class="- topic/stentry stentry">Re-authorize with <code class="+ topic/ph pr-d/codeph ph codeph">fleet:read</code> scope.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">429</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">RATE_LIMIT_EXCEEDED</code></td>
+          <td class="- topic/stentry stentry">Too many requests in the current time window.</td>
+          <td class="- topic/stentry stentry">Back off and retry after <code class="+ topic/ph pr-d/codeph ph codeph">Retry-After</code> header value.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">500</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INTERNAL_ERROR</code></td>
+          <td class="- topic/stentry stentry">Unexpected server error.</td>
+          <td class="- topic/stentry stentry">Retry with exponential back-off. Contact support if persistent.</td>
+        </tr></tbody></table></div>
+    </section>
+
+  </div>
+  
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-fleet-vehicle-status.html" title="Returns the real-time operational status of a single vehicle, including location, connectivity, engine state, fuel/battery level, and door lock state.">GET Vehicle Status</a><div class="- topic/desc desc">     Returns the real-time operational status of a single vehicle, including location,     connectivity, engine state, fuel/battery level, and door lock state.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-fleet-group-management.html" title="Create fleet groups, assign vehicles to groups, and retrieve group details. Fleet groups enable centralized management of vehicles by region, type, or purpose.">Fleet Group Management</a><div class="- topic/desc desc">     Create fleet groups, assign vehicles to groups, and retrieve group details.     Fleet groups enable centralized management of vehicles by region, type, or purpose.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../auth/ref-api-authentication.html" title="API Authentication">API Authentication</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

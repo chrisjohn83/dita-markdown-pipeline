@@ -1,0 +1,234 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="description" content="Run end-to-end validation scenarios to confirm that connected vehicle features such as emergency calls, infotainment, and remote commands work reliably across device, cloud, and application layers."/><meta name="DC.relation" content="../../dita/tasks/task-connectivity-testing.html"/><meta name="DC.relation" content="../../dita/tasks/task-remote-operations.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="e_2_e_validation"/>        
+      <title>Validate End-to-End Connected Features</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="Tasks/e_2_e_validation.dita"/><meta name="wh-out-relpath" content="Project/Tasks/e_2_e_validation.html"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-theme.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen.css?buildId=20260504200909"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=20260504200909"/>
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260504200909"></script>
+    <script src="../oxygen-webhelp/app/themes.js?buildId=20260504200909"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260504200909"></script>
+    
+    <script defer="defer" src="../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="e_2_e_validation" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e11-mi" data-tocid="tocId-d262e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e66-mi" data-tocid="tocId-d262e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d262e121-mi" data-tocid="tocId-d262e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../Reference/Supported%20Technologies.html">References</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Validate End-to-End Connected Features</h1>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"> Run end-to-end validation scenarios to confirm that connected vehicle features such
+        as emergency calls, infotainment, and remote commands work reliably across device, cloud,
+        and application layers. </p>
+        <section class="- topic/section task/prereq section prereq" id="e_2_e_validation__prereq_il4_ymj_cjc" data-ofbid="e_2_e_validation__prereq_il4_ymj_cjc">
+            <p class="- topic/p p">Before running end-to-end validation:</p>
+            <ul class="- topic/ul ul" id="e_2_e_validation__ul_jl4_ymj_cjc" data-ofbid="e_2_e_validation__ul_jl4_ymj_cjc">
+                <li class="- topic/li li">Device must be onboarded and in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Active</span> status.</li>
+                <li class="- topic/li li">Connectivity testing must have passed for the target device.</li>
+                <li class="- topic/li li">You must have <em class="+ topic/ph hi-d/i ph i">Test Engineer</em> or <em class="+ topic/ph hi-d/i ph i">Admin</em> role permissions.</li>
+                <li class="- topic/li li">All target application endpoints must be reachable and healthy.</li>
+            </ul>
+        </section>
+        <section class="- topic/section task/context section context" id="e_2_e_validation__context_kl4_ymj_cjc" data-ofbid="e_2_e_validation__context_kl4_ymj_cjc">
+            <p class="- topic/p p"> End-to-end validation tests the complete journey of a feature — from a trigger event
+                at the vehicle level, through cloud processing, to the final outcome in the user
+                application. This is the final validation gate before a device or software release
+                is cleared for production. </p>
+        </section>
+        <section><ol class="- topic/ol task/steps ol steps" id="e_2_e_validation__steps_ll4_ymj_cjc" data-ofbid="e_2_e_validation__steps_ll4_ymj_cjc"><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Navigate to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Test Center</span> &gt; <span class="+ topic/ph ui-d/uicontrol ph uicontrol">E2E
+                        Validation</span>.</span>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Select the device and the validation scenario to execute.</span>
+                <div class="simpletable-container"><table class="- topic/simpletable task/choicetable simpletable choicetable choicetableborder" id="e_2_e_validation__choicetable_ml4_ymj_cjc" data-ofbid="e_2_e_validation__choicetable_ml4_ymj_cjc"><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead><tr class="- topic/sthead task/chhead sthead chhead"><th scope="col" class="- topic/stentry task/choptionhd stentry choptionhd">Option</th><th scope="col" class="- topic/stentry task/chdeschd stentry chdeschd">Description</th></tr></thead><tbody><tr class="- topic/strow task/chrow strow chrow">
+                        <th scope="row" class="- topic/stentry task/choption stentry choption">Emergency Call (eCall)</th>
+                        <td class="- topic/stentry task/chdesc stentry chdesc">Simulates an emergency trigger and validates call routing and
+                            response time.</td>
+                    </tr><tr class="- topic/strow task/chrow strow chrow">
+                        <th scope="row" class="- topic/stentry task/choption stentry choption">Infotainment Streaming</th>
+                        <td class="- topic/stentry task/chdesc stentry chdesc">Validates media streaming quality, buffering, and handoff
+                            behavior.</td>
+                    </tr><tr class="- topic/strow task/chrow strow chrow">
+                        <th scope="row" class="- topic/stentry task/choption stentry choption">Remote Command Round-trip</th>
+                        <td class="- topic/stentry task/chdesc stentry chdesc">Issues a test command and verifies delivery, execution, and
+                            acknowledgment.</td>
+                    </tr><tr class="- topic/strow task/chrow strow chrow">
+                        <th scope="row" class="- topic/stentry task/choption stentry choption">OTA Update Delivery</th>
+                        <td class="- topic/stentry task/chdesc stentry chdesc">Pushes a test firmware package and verifies successful installation
+                            and rollback.</td>
+                    </tr></tbody></table></div>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run Scenario</span> to trigger the selected test.</span>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Monitor system response across all three layers in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">E2E
+                        Monitor</span> panel.</span>
+                <ol type="a" class="- topic/ol task/substeps ol substeps" id="e_2_e_validation__substeps_nl4_ymj_cjc" data-ofbid="e_2_e_validation__substeps_nl4_ymj_cjc">
+                    <li class="- topic/li task/substep li substep">
+                        <span class="- topic/ph task/cmd ph cmd">Observe the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device Layer</span> panel for trigger event
+                            confirmation.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep">
+                        <span class="- topic/ph task/cmd ph cmd">Observe the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Cloud Layer</span> panel for processing and
+                            routing status.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep">
+                        <span class="- topic/ph task/cmd ph cmd">Observe the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Application Layer</span> panel for delivery
+                            confirmation.</span>
+                    </li>
+                </ol>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Review the success criteria checklist at the end of the scenario run.</span>
+                <div class="- topic/itemgroup task/info itemgroup info"> Each scenario has predefined pass criteria. Examples: <ul class="- topic/ul ul" id="e_2_e_validation__ul_ol4_ymj_cjc" data-ofbid="e_2_e_validation__ul_ol4_ymj_cjc">
+                        <li class="- topic/li li">eCall: Response routed within 2 seconds.</li>
+                        <li class="- topic/li li">Remote command: Round-trip acknowledgment within 3 seconds.</li>
+                        <li class="- topic/li li">OTA: Package installed with no integrity errors.</li>
+                    </ul>
+                </div>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Inspect the structured logs for each layer in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Log
+                        Viewer</span> tab.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">Logs include timestamps, event IDs, and layer-specific diagnostic
+                    details.</div>
+            </li><li class="- topic/li task/step li step stepexpand">
+                <span class="- topic/ph task/cmd ph cmd">Export the validation report for sign-off and traceability documentation.</span>
+            </li></ol></section>
+        <section class="- topic/section task/result section result" id="e_2_e_validation__result_pl4_ymj_cjc" data-ofbid="e_2_e_validation__result_pl4_ymj_cjc">
+            <p class="- topic/p p"> All connected features are confirmed to work reliably across the device, cloud, and
+                application layers. The validation report is stored in the platform and linked to
+                the device's compliance record. </p>
+        </section>
+        <section class="- topic/section task/postreq section postreq" id="e_2_e_validation__postreq_ql4_ymj_cjc" data-ofbid="e_2_e_validation__postreq_ql4_ymj_cjc">
+            <p class="- topic/p p"> If all E2E validation scenarios pass, the device is cleared for production
+                deployment. If any scenario fails, review the layer-specific logs and re-run after
+                remediation. </p>
+        </section>
+    </div>
+    
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/tasks/task-connectivity-testing.html" title="Validate a vehicle device's wireless connectivity by running RF and protocol tests across simulated 5G, LTE, and satellite (NR-NTN) network conditions.">Perform Connectivity Testing</a><div class="- topic/desc desc">     Validate a vehicle device's wireless connectivity by running RF and protocol tests     across simulated 5G, LTE, and satellite (NR-NTN) network conditions.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../../dita/tasks/task-remote-operations.html" title="Send a remote command to a connected vehicle and track its execution through the full command lifecycle from dispatch to acknowledgment.">Execute Remote Commands</a><div class="- topic/desc desc">     Send a remote command to a connected vehicle and track its execution through the full     command lifecycle from dispatch to acknowledgment.   </div></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="28.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="reference"/><meta name="description" content="Retrieve active maintenance alerts for a vehicle and create custom alert rules that trigger when telemetry thresholds are exceeded."/><meta name="DC.relation" content="ref-maintenance-telemetry.html"/><meta name="DC.relation" content="ref-maintenance-health-score.html"/><meta name="DC.relation" content="task-maintenance-configure-alerts.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="ref-maintenance-alerts"/>        
+      <title>Maintenance Alert APIs — GET and POST</title><!--  Generated with Oxygen version 28.0, build number 2025122317.  --><meta name="wh-path2root" content="../../"/><meta name="wh-toc-id" content=""/><meta name="wh-source-relpath" content="API/maintenance/ref-maintenance-alerts.dita"/><meta name="wh-out-relpath" content="Project/API/maintenance/ref-maintenance-alerts.html"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/bootstrap.css?buildId=2025122317"/>
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/jquery-ui.css?buildId=2025122317"/>
+        
+    <link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/app/topic.css?buildId=2025122317"/>
+<link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen-theme.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/oxygen.css?buildId=20260524230819"/><link rel="stylesheet" type="text/css" href="../../oxygen-webhelp/template/notes.css?buildId=20260524230819"/>
+    <script src="../../oxygen-webhelp/app/options/properties.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/themes.js?buildId=20260524230819"></script>
+    <script src="../../oxygen-webhelp/app/localization/strings.js?buildId=2025122317"></script>
+    <script src="../../oxygen-webhelp/app/search/index/keywords.js?buildId=20260524230819"></script>
+    
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-ui.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-bootpag.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/jquery-highlight.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/popperjs-core.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/bootstrap.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/dompurify.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/image-map.js?buildId=2025122317"></script>
+    <script defer="defer" src="../../oxygen-webhelp/app/maphilight.js?buildId=2025122317"></script>
+
+    <script defer="defer" src="../../oxygen-webhelp/app/topic.js?buildId=2025122317"></script>
+</head>
+
+    <body id="ref-maintenance-alerts" class="wh_topic_page frmBody">
+        <a class="visually-hidden-focusable" id="wh_jump_to_content" href="#wh_topic_body">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid navbar-expand-md">
+        <div class="wh_header_flex_container navbar-nav navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../../index.html"><span class="title">IoT Connected Car Platform</span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e11-mi" data-tocid="tocId-d323e11" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Topics/Overview.html">Getting Started</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e66-mi" data-tocid="tocId-d323e66" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Tasks/Device_Onboarding.html">Device Onboarding and Testing Connectivity</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e121-mi" data-tocid="tocId-d323e121" data-state="not-ready" class=" topicref "><span class="title"><a href="../../Reference/Supported%20Technologies.html">References</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e167-mi" data-tocid="tocId-d323e167" data-state="not-ready" class=" topicref "><span class="title"><a href="../../auth/ref-api-authentication.html">Authentication</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e179-mi" data-tocid="tocId-d323e179" data-state="not-ready" class=" topicref "><span class="title"><a href="../../API/fleet/ref-fleet-list-vehicles.html">Use Case 1: Fleet Management</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d323e238-mi" data-tocid="tocId-d323e238" data-state="not-ready" class=" topicref "><span class="title"><a href="../../maintenance/ref-maintenance-telemetry.html">Use Case 3: Predictive Maintenance</a></span></span></li></ul></nav>
+                
+                <div class=" wh_theme "><button id="wh_theme_button" class="wh_theme_btn" data-wh-theme="auto" title="Switch theme" aria-label="Switch theme" aria-haspopup="menu" aria-expanded="false"></button></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid navbar-expand-md" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_full_width_link" data-next-state="expanded" aria-label="Maximize to full width" title="Maximize to full width"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic       reference/reference topic reference" role="article" aria-labelledby="ariaid-title1">
+  <h1 class="- topic/title title topictitle1" id="ariaid-title1">Maintenance Alert APIs — GET and POST</h1>
+  
+  <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc">
+    Retrieve active maintenance alerts for a vehicle and create custom alert rules
+    that trigger when telemetry thresholds are exceeded.
+  </p>
+
+    
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">GET /vehicles/{vehicleId}/alerts — List Active Alerts</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:25%"/><col style="width:75%"/></colgroup><tbody><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Method</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">GET</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">URI Path</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">https://api.connectedcar.io/v1/vehicles/{vehicleId}/alerts</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Auth Scope</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">telemetry:read</code></td></tr></tbody></table></div>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Query Parameters</strong></p>
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:21.73913043478261%"/><col style="width:17.39130434782609%"/><col style="width:17.39130434782609%"/><col style="width:43.47826086956522%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__7">Parameter</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__8">Type</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__9">Required</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__10">Description</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">severity</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Filter by severity. Values: <code class="+ topic/ph pr-d/codeph ph codeph">critical</code>, <code class="+ topic/ph pr-d/codeph ph codeph">warning</code>, <code class="+ topic/ph pr-d/codeph ph codeph">info</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">status</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Filter by alert status. Values: <code class="+ topic/ph pr-d/codeph ph codeph">active</code>, <code class="+ topic/ph pr-d/codeph ph codeph">resolved</code>. Default: <code class="+ topic/ph pr-d/codeph ph codeph">active</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">category</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Filter by component category: <code class="+ topic/ph pr-d/codeph ph codeph">engine</code>, <code class="+ topic/ph pr-d/codeph ph codeph">battery</code>, <code class="+ topic/ph pr-d/codeph ph codeph">brakes</code>, <code class="+ topic/ph pr-d/codeph ph codeph">tyres</code>, <code class="+ topic/ph pr-d/codeph ph codeph">connectivity</code>.</td>
+        </tr></tbody></table></div>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sample Request</strong></p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>GET /v1/vehicles/veh_X7K2M9P1/alerts?severity=critical&amp;status=active HTTP/1.1
+Host: api.connectedcar.io
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
+X-Tenant-ID: tenant_abc123</code></pre>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sample Response — 200 OK</strong></p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{
+  "status": "success",
+  "data": {
+    "vehicle_id": "veh_X7K2M9P1",
+    "alerts": [
+      {
+        "alert_id": "alrt_T4P2N8K1",
+        "category": "tyres",
+        "severity": "critical",
+        "rule_id": "rule_tyre_pressure",
+        "metric": "tyre_pressure_rear_left_kpa",
+        "triggered_value": 178,
+        "threshold": 195,
+        "condition": "less_than",
+        "message": "Rear-left tyre pressure critically low: 178 kPa (min 195 kPa).",
+        "status": "active",
+        "triggered_at": "2026-04-30T06:00:00Z",
+        "resolved_at": null,
+        "notification_sent": true,
+        "notification_channels": ["push", "sms"]
+      },
+      {
+        "alert_id": "alrt_B7R3M6Q2",
+        "category": "brakes",
+        "severity": "warning",
+        "rule_id": "rule_brake_wear",
+        "metric": "front_pad_wear_percent",
+        "triggered_value": 62,
+        "threshold": 60,
+        "condition": "greater_than",
+        "message": "Front brake pad wear at 62% — inspect within 14 days.",
+        "status": "active",
+        "triggered_at": "2026-04-28T14:22:00Z",
+        "resolved_at": null,
+        "notification_sent": true,
+        "notification_channels": ["push"]
+      }
+    ],
+    "total_alerts": 2
+  },
+  "timestamp": "2026-04-30T10:10:00Z"
+}</code></pre>
+    </section>
+
+    
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">POST /vehicles/{vehicleId}/alerts/rules — Create Alert Rule</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:25%"/><col style="width:75%"/></colgroup><tbody><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Method</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">POST</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">URI Path</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">https://api.connectedcar.io/v1/vehicles/{vehicleId}/alerts/rules</code></td></tr><tr class="- topic/strow strow"><td class="- topic/stentry stentry"><strong class="+ topic/ph hi-d/b ph b">Auth Scope</strong></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">telemetry:write</code></td></tr></tbody></table></div>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Request Body Parameters</strong></p>
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:21.73913043478261%"/><col style="width:17.39130434782609%"/><col style="width:17.39130434782609%"/><col style="width:43.47826086956522%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__29">Field</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__30">Type</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__31">Required</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__32">Description</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">name</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Human-readable rule name.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">metric</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Telemetry metric to monitor (see supported metrics in telemetry endpoint).</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">condition</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Comparison operator: <code class="+ topic/ph pr-d/codeph ph codeph">greater_than</code>, <code class="+ topic/ph pr-d/codeph ph codeph">less_than</code>, <code class="+ topic/ph pr-d/codeph ph codeph">equals</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">threshold</code></td><td class="- topic/stentry stentry">number</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Numeric threshold value that triggers the alert.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">severity</code></td><td class="- topic/stentry stentry">string</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Alert severity: <code class="+ topic/ph pr-d/codeph ph codeph">critical</code>, <code class="+ topic/ph pr-d/codeph ph codeph">warning</code>, <code class="+ topic/ph pr-d/codeph ph codeph">info</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">notification_channels</code></td><td class="- topic/stentry stentry">string[]</td><td class="- topic/stentry stentry">Yes</td>
+          <td class="- topic/stentry stentry">Delivery channels: <code class="+ topic/ph pr-d/codeph ph codeph">push</code>, <code class="+ topic/ph pr-d/codeph ph codeph">sms</code>, <code class="+ topic/ph pr-d/codeph ph codeph">email</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">cooldown_minutes</code></td><td class="- topic/stentry stentry">integer</td><td class="- topic/stentry stentry">No</td>
+          <td class="- topic/stentry stentry">Minimum minutes between repeat notifications. Default: <code class="+ topic/ph pr-d/codeph ph codeph">60</code>.</td>
+        </tr></tbody></table></div>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sample Request</strong></p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>POST /v1/vehicles/veh_X7K2M9P1/alerts/rules HTTP/1.1
+Host: api.connectedcar.io
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
+X-Tenant-ID: tenant_abc123
+Content-Type: application/json
+
+{
+  "name": "High Engine Temperature Alert",
+  "metric": "engine_temp_celsius",
+  "condition": "greater_than",
+  "threshold": 105,
+  "severity": "critical",
+  "notification_channels": ["push", "sms", "email"],
+  "cooldown_minutes": 30
+}</code></pre>
+
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Sample Response — 201 Created</strong></p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{
+  "status": "success",
+  "data": {
+    "rule_id": "rule_eng_temp_high",
+    "vehicle_id": "veh_X7K2M9P1",
+    "name": "High Engine Temperature Alert",
+    "metric": "engine_temp_celsius",
+    "condition": "greater_than",
+    "threshold": 105,
+    "severity": "critical",
+    "notification_channels": ["push", "sms", "email"],
+    "cooldown_minutes": 30,
+    "enabled": true,
+    "created_at": "2026-04-30T10:15:00Z",
+    "created_by": "user_fleet_mgr_01"
+  },
+  "timestamp": "2026-04-30T10:15:01Z"
+}</code></pre>
+    </section>
+
+    
+    <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Error Codes — Alert APIs</h2>
+      
+      <div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:15.686274509803924%"/><col style="width:25.490196078431378%"/><col style="width:39.21568627450981%"/><col style="width:19.607843137254903%"/></colgroup><thead><tr class="- topic/sthead sthead">
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__61">HTTP Status</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__62">Error Code</th>
+          <th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__63">Description</th><th class="- topic/stentry stentry" scope="col" id="ref-maintenance-alerts__stentry__64">Resolution</th>
+        </tr></thead><tbody><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">400</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INVALID_METRIC</code></td>
+          <td class="- topic/stentry stentry">Metric name is not supported for alert rules.</td>
+          <td class="- topic/stentry stentry">Use a supported metric from the telemetry endpoint documentation.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">400</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INVALID_CONDITION</code></td>
+          <td class="- topic/stentry stentry">Condition operator not recognized.</td>
+          <td class="- topic/stentry stentry">Use <code class="+ topic/ph pr-d/codeph ph codeph">greater_than</code>, <code class="+ topic/ph pr-d/codeph ph codeph">less_than</code>, or <code class="+ topic/ph pr-d/codeph ph codeph">equals</code>.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">409</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">RULE_ALREADY_EXISTS</code></td>
+          <td class="- topic/stentry stentry">An alert rule for the same metric and condition already exists on this vehicle.</td>
+          <td class="- topic/stentry stentry">Update the existing rule or delete it before creating a new one.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">403</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">INSUFFICIENT_SCOPE</code></td>
+          <td class="- topic/stentry stentry">Token missing required scope (<code class="+ topic/ph pr-d/codeph ph codeph">telemetry:read</code> or <code class="+ topic/ph pr-d/codeph ph codeph">telemetry:write</code>).</td>
+          <td class="- topic/stentry stentry">Re-authorize with the correct scope.</td>
+        </tr><tr class="- topic/strow strow">
+          <td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">404</code></td><td class="- topic/stentry stentry"><code class="+ topic/ph pr-d/codeph ph codeph">VEHICLE_NOT_FOUND</code></td>
+          <td class="- topic/stentry stentry">Vehicle ID not found in tenant.</td>
+          <td class="- topic/stentry stentry">Verify vehicle ID from the fleet list.</td>
+        </tr></tbody></table></div>
+    </section>
+
+  </div>
+  
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-maintenance-telemetry.html" title="Retrieves historical telemetry records for a vehicle over a specified time range. Used for trend analysis, predictive maintenance modelling, and usage reporting.">Query Telemetry History</a><div class="- topic/desc desc">     Retrieves historical telemetry records for a vehicle over a specified time range.     Used for trend analysis, predictive maintenance modelling, and usage reporting.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="ref-maintenance-health-score.html" title="Returns a composite predictive health score for the vehicle, derived from telemetry trends across engine, battery, tyres, and brakes — enabling proactive maintenance decisions.">Get Vehicle Health Score</a><div class="- topic/desc desc">     Returns a composite predictive health score for the vehicle, derived from telemetry     trends across engine, battery, tyres, and brakes — enabling proactive maintenance decisions.   </div></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="task-maintenance-configure-alerts.html" title="Create custom telemetry alert rules that automatically notify your team when a vehicle's sensor readings cross maintenance-critical thresholds — enabling real-time predictive alerts.">Task: Configure Maintenance Alerts</a><div class="- topic/desc desc">     Create custom telemetry alert rules that automatically notify your team when a vehicle's     sensor readings cross maintenance-critical thresholds — enabling real-time predictive alerts.   </div></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank" rel="noopener">&lt;oXygen/&gt; XML WebHelp</a> - Evaluation Version
+  </div>
+</footer>
+        
+        <button id="go2top" class="d-print-none" title="Go to top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </button>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
