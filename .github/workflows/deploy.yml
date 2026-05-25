@@ -1,13 +1,14 @@
-name: Deploy Docusaurus Site
+name: Deploy Docusaurus
 
 on:
   push:
     branches:
       - main
 
-    permissions:
-        contents: write
-      jobs:
+permissions:
+  contents: write
+
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
