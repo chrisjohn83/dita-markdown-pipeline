@@ -1,8 +1,8 @@
-# Fleet Group Management APIs {#ref-fleet-group-management .reference}
+# Fleet Group Management APIs &#123;#ref-fleet-group-management .reference&#125;
 
 Create fleet groups, assign vehicles to groups, and retrieve group details. Fleet groups enable centralized management of vehicles by region, type, or purpose.
 
-## POST /fleet/groups — Create a Fleet Group { .section}
+## POST /fleet/groups — Create a Fleet Group &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -32,8 +32,8 @@ Create fleet groups, assign vehicles to groups, and retrieve group details. Flee
 </table>**Authentication**
 
 ```
-Authorization: Bearer {access_token}
-X-Tenant-ID: {tenant_id}
+Authorization: Bearer &#123;access_token&#125;
+X-Tenant-ID: &#123;tenant_id&#125;
 Content-Type: application/json
 ```
 
@@ -56,20 +56,20 @@ X-Tenant-ID: tenant_abc123
 Content-Type: application/json
 X-Request-ID: b2c3d4e5-f6a7-8901-bcde-f12345678901
 
-{
+&#123;
   "name": "North Region Fleet",
   "description": "All delivery vehicles operating in the northern region",
   "region": "north-america",
   "tags": ["delivery", "urban", "north"]
-}
+&#125;
 ```
 
 **Sample Response — 201 Created**
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "group_id": "grp_fleet_north",
     "name": "North Region Fleet",
     "description": "All delivery vehicles operating in the northern region",
@@ -78,13 +78,13 @@ X-Request-ID: b2c3d4e5-f6a7-8901-bcde-f12345678901
     "vehicle_count": 0,
     "created_at": "2026-04-30T09:00:00Z",
     "created_by": "user_admin_01"
-  },
+  &#125;,
   "request_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
   "timestamp": "2026-04-30T09:00:01Z"
-}
+&#125;
 ```
 
-## PUT /fleet/vehicles/\{vehicleId\}/group — Assign Vehicle to Group { .section}
+## PUT /fleet/vehicles/\&#123;vehicleId\&#125;/group — Assign Vehicle to Group &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -100,7 +100,7 @@ X-Request-ID: b2c3d4e5-f6a7-8901-bcde-f12345678901
 
 </td><td>
 
-`https://api.connectedcar.io/v1/fleet/vehicles/{vehicleId}/group`
+`https://api.connectedcar.io/v1/fleet/vehicles/&#123;vehicleId&#125;/group`
 
 </td></tr><tr><td>
 
@@ -126,29 +126,29 @@ Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
 X-Tenant-ID: tenant_abc123
 Content-Type: application/json
 
-{
+&#123;
   "group_id": "grp_fleet_north"
-}
+&#125;
 ```
 
 **Sample Response — 200 OK**
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "vehicle_id": "veh_X7K2M9P1",
     "vin": "1HGCM82633A004352",
     "group_id": "grp_fleet_north",
     "group_name": "North Region Fleet",
     "assigned_at": "2026-04-30T09:05:00Z",
     "assigned_by": "user_admin_01"
-  },
+  &#125;,
   "timestamp": "2026-04-30T09:05:01Z"
-}
+&#125;
 ```
 
-## GET /fleet/groups/\{groupId\}/vehicles — List Vehicles in Group { .section}
+## GET /fleet/groups/\&#123;groupId\&#125;/vehicles — List Vehicles in Group &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -164,7 +164,7 @@ Content-Type: application/json
 
 </td><td>
 
-`https://api.connectedcar.io/v1/fleet/groups/{groupId}/vehicles`
+`https://api.connectedcar.io/v1/fleet/groups/&#123;groupId&#125;/vehicles`
 
 </td></tr><tr><td>
 
@@ -187,22 +187,22 @@ X-Tenant-ID: tenant_abc123
 **Sample Response — 200 OK**
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "group_id": "grp_fleet_north",
     "group_name": "North Region Fleet",
     "vehicles": [
-      { "vehicle_id": "veh_X7K2M9P1", "vin": "1HGCM82633A004352", "status": "active" },
-      { "vehicle_id": "veh_A3N8Q5R7", "vin": "2T1BURHE0JC054321", "status": "active" }
+      &#123; "vehicle_id": "veh_X7K2M9P1", "vin": "1HGCM82633A004352", "status": "active" &#125;,
+      &#123; "vehicle_id": "veh_A3N8Q5R7", "vin": "2T1BURHE0JC054321", "status": "active" &#125;
     ],
-    "pagination": { "page": 1, "limit": 5, "total_records": 28, "total_pages": 6 }
-  },
+    "pagination": &#123; "page": 1, "limit": 5, "total_records": 28, "total_pages": 6 &#125;
+  &#125;,
   "timestamp": "2026-04-30T09:10:00Z"
-}
+&#125;
 ```
 
-## Error Codes — Fleet Group APIs { .section}
+## Error Codes — Fleet Group APIs &#123; .section&#125;
 
 |HTTP Status|Error Code|Description|Resolution|
 |-----------|----------|-----------|----------|
@@ -218,4 +218,5 @@ X-Tenant-ID: tenant_abc123
 [List All Fleet Vehicles](ref-fleet-list-vehicles.md)
 
 [Task: Monitor Fleet Vehicles](task-fleet-monitor-vehicles.md)
+
 

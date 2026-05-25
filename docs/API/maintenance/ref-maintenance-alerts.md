@@ -1,8 +1,8 @@
-# Maintenance Alert APIs — GET and POST {#ref-maintenance-alerts .reference}
+# Maintenance Alert APIs — GET and POST &#123;#ref-maintenance-alerts .reference&#125;
 
 Retrieve active maintenance alerts for a vehicle and create custom alert rules that trigger when telemetry thresholds are exceeded.
 
-## GET /vehicles/\{vehicleId\}/alerts — List Active Alerts { .section}
+## GET /vehicles/\&#123;vehicleId\&#125;/alerts — List Active Alerts &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -18,7 +18,7 @@ Retrieve active maintenance alerts for a vehicle and create custom alert rules t
 
 </td><td>
 
-`https://api.connectedcar.io/v1/vehicles/{vehicleId}/alerts`
+`https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/alerts`
 
 </td></tr><tr><td>
 
@@ -49,12 +49,12 @@ X-Tenant-ID: tenant_abc123
 **Sample Response — 200 OK**
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "vehicle_id": "veh_X7K2M9P1",
     "alerts": [
-      {
+      &#123;
         "alert_id": "alrt_T4P2N8K1",
         "category": "tyres",
         "severity": "critical",
@@ -69,8 +69,8 @@ X-Tenant-ID: tenant_abc123
         "resolved_at": null,
         "notification_sent": true,
         "notification_channels": ["push", "sms"]
-      },
-      {
+      &#125;,
+      &#123;
         "alert_id": "alrt_B7R3M6Q2",
         "category": "brakes",
         "severity": "warning",
@@ -85,15 +85,15 @@ X-Tenant-ID: tenant_abc123
         "resolved_at": null,
         "notification_sent": true,
         "notification_channels": ["push"]
-      }
+      &#125;
     ],
     "total_alerts": 2
-  },
+  &#125;,
   "timestamp": "2026-04-30T10:10:00Z"
-}
+&#125;
 ```
 
-## POST /vehicles/\{vehicleId\}/alerts/rules — Create Alert Rule { .section}
+## POST /vehicles/\&#123;vehicleId\&#125;/alerts/rules — Create Alert Rule &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -109,7 +109,7 @@ X-Tenant-ID: tenant_abc123
 
 </td><td>
 
-`https://api.connectedcar.io/v1/vehicles/{vehicleId}/alerts/rules`
+`https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/alerts/rules`
 
 </td></tr><tr><td>
 
@@ -141,7 +141,7 @@ Authorization: Bearer eyJhbGciOiJSUzI1NiJ9...
 X-Tenant-ID: tenant_abc123
 Content-Type: application/json
 
-{
+&#123;
   "name": "High Engine Temperature Alert",
   "metric": "engine_temp_celsius",
   "condition": "greater_than",
@@ -149,15 +149,15 @@ Content-Type: application/json
   "severity": "critical",
   "notification_channels": ["push", "sms", "email"],
   "cooldown_minutes": 30
-}
+&#125;
 ```
 
 **Sample Response — 201 Created**
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "rule_id": "rule_eng_temp_high",
     "vehicle_id": "veh_X7K2M9P1",
     "name": "High Engine Temperature Alert",
@@ -170,12 +170,12 @@ Content-Type: application/json
     "enabled": true,
     "created_at": "2026-04-30T10:15:00Z",
     "created_by": "user_fleet_mgr_01"
-  },
+  &#125;,
   "timestamp": "2026-04-30T10:15:01Z"
-}
+&#125;
 ```
 
-## Error Codes — Alert APIs { .section}
+## Error Codes — Alert APIs &#123; .section&#125;
 
 |HTTP Status|Error Code|Description|Resolution|
 |-----------|----------|-----------|----------|
@@ -193,4 +193,5 @@ Content-Type: application/json
 [Get Vehicle Health Score](ref-maintenance-health-score.md)
 
 [Task: Configure Maintenance Alerts](task-maintenance-configure-alerts.md)
+
 

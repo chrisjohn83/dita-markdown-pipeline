@@ -10,7 +10,7 @@
 -   Use Case 1: Fleet Management
     -   Fleet Management — API Reference
         -   [GET /fleet/vehicles — List All Fleet Vehicles](API/fleet/ref-fleet-list-vehicles.md)
-        -   [GET /fleet/vehicles/\{vehicleId\}/status — Get Vehicle Status](API/fleet/ref-fleet-vehicle-status.md)
+        -   [GET /fleet/vehicles/\&#123;vehicleId\&#125;/status — Get Vehicle Status](API/fleet/ref-fleet-vehicle-status.md)
         -   [Fleet Group Management APIs](API/fleet/ref-fleet-group-management.md)
     -   Fleet Management — How-To Tasks
         -   [Monitor Fleet Vehicles in Real Time](API/fleet/task-fleet-monitor-vehicles.md)
@@ -31,4 +31,5 @@
     -   Predictive Maintenance — How-To Tasks
         -   [Monitor Telemetry Trends](maintenance/task-maintenance-monitor-trends.md)
         -   [Configure Maintenance Alert Rules](maintenance/task-maintenance-configure-alerts.md)
+
 

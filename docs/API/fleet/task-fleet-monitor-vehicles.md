@@ -1,4 +1,4 @@
-# Monitor Fleet Vehicles in Real Time {#task-fleet-monitor-vehicles .task}
+# Monitor Fleet Vehicles in Real Time &#123;#task-fleet-monitor-vehicles .task&#125;
 
 Use the Fleet Management REST APIs to retrieve a live view of all vehicles in your fleet, inspect individual vehicle status, and identify vehicles that are offline or in alert state.
 
@@ -26,8 +26,8 @@ Fleet monitoring is the process of continuously polling vehicle status and locat
 
     ```
     GET /v1/fleet/vehicles?status=active&limit=200
-    Authorization: Bearer {access_token}
-    X-Tenant-ID: {tenant_id}
+    Authorization: Bearer &#123;access_token&#125;
+    X-Tenant-ID: &#123;tenant_id&#125;
     ```
 
     Parse `data.vehicles[]` to populate your fleet map or table. Use `pagination.next_page` to page through results if `total_records` exceeds your `limit`.
@@ -43,9 +43,9 @@ Fleet monitoring is the process of continuously polling vehicle status and locat
 4.  Drill into individual vehicle status for flagged vehicles.
 
     ```
-    GET /v1/fleet/vehicles/{vehicleId}/status
-    Authorization: Bearer {access_token}
-    X-Tenant-ID: {tenant_id}
+    GET /v1/fleet/vehicles/&#123;vehicleId&#125;/status
+    Authorization: Bearer &#123;access_token&#125;
+    X-Tenant-ID: &#123;tenant_id&#125;
     ```
 
     Review `engine.state`, `fuel.level_percent`, `battery.health_percent`, `location`, and `connectivity.last_heartbeat` for diagnostic context.
@@ -67,4 +67,5 @@ To organize vehicles by region or purpose, proceed to [Manage Fleet Groups](task
 [API: Get Vehicle Status](ref-fleet-vehicle-status.md)
 
 [API Authentication](../auth/ref-api-authentication.md)
+
 

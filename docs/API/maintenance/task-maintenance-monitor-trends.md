@@ -1,4 +1,4 @@
-# Monitor Telemetry Trends for Predictive Maintenance {#task-maintenance-monitor-trends .task}
+# Monitor Telemetry Trends for Predictive Maintenance &#123;#task-maintenance-monitor-trends .task&#125;
 
 Use the Telemetry and Health Score APIs to retrieve historical data, identify deteriorating component trends, and take proactive maintenance action before a failure occurs.
 
@@ -13,9 +13,9 @@ Predictive maintenance uses historical telemetry trends — not just current val
 1.  Retrieve the overall health score to quickly triage vehicle condition.
 
     ```
-    GET /v1/vehicles/{vehicleId}/health
-    Authorization: Bearer {access_token}
-    X-Tenant-ID: {tenant_id}
+    GET /v1/vehicles/&#123;vehicleId&#125;/health
+    Authorization: Bearer &#123;access_token&#125;
+    X-Tenant-ID: &#123;tenant_id&#125;
     ```
 
     Focus on:
@@ -27,13 +27,13 @@ Predictive maintenance uses historical telemetry trends — not just current val
 2.  For components flagged as Fair, Poor, or Critical, query their telemetry history.
 
     ```
-    GET /v1/vehicles/{vehicleId}/telemetry
+    GET /v1/vehicles/&#123;vehicleId&#125;/telemetry
       ?from=2026-04-01T00:00:00Z
       &to=2026-04-30T23:59:59Z
       &metrics=engine_temp,oil_pressure,battery_voltage
       &resolution=1h
-    Authorization: Bearer {access_token}
-    X-Tenant-ID: {tenant_id}
+    Authorization: Bearer &#123;access_token&#125;
+    X-Tenant-ID: &#123;tenant_id&#125;
     ```
 
     Plot the returned `records[]` over time to visually identify declining trends \(e.g., steadily falling oil pressure, rising engine temperature\).
@@ -50,9 +50,9 @@ Predictive maintenance uses historical telemetry trends — not just current val
 4.  Retrieve any active maintenance alerts on the vehicle.
 
     ```
-    GET /v1/vehicles/{vehicleId}/alerts?status=active
-    Authorization: Bearer {access_token}
-    X-Tenant-ID: {tenant_id}
+    GET /v1/vehicles/&#123;vehicleId&#125;/alerts?status=active
+    Authorization: Bearer &#123;access_token&#125;
+    X-Tenant-ID: &#123;tenant_id&#125;
     ```
 
     Review `alerts[].message` and `severity` to determine urgency and schedule the appropriate maintenance action.
@@ -81,4 +81,5 @@ To receive automated alerts when thresholds are breached in future, proceed to [
 [API: Get Vehicle Health Score](ref-maintenance-health-score.md)
 
 [API: Maintenance Alerts](ref-maintenance-alerts.md)
+
 

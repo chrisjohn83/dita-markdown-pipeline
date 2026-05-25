@@ -1,8 +1,8 @@
-# GET /vehicles/\{vehicleId\}/telemetry — Query Telemetry History {#ref-maintenance-telemetry .reference}
+# GET /vehicles/\&#123;vehicleId\&#125;/telemetry — Query Telemetry History &#123;#ref-maintenance-telemetry .reference&#125;
 
 Retrieves historical telemetry records for a vehicle over a specified time range. Used for trend analysis, predictive maintenance modelling, and usage reporting.
 
-## Endpoint { .section}
+## Endpoint &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -18,7 +18,7 @@ Retrieves historical telemetry records for a vehicle over a specified time range
 
 </td><td>
 
-`https://api.connectedcar.io/v1/vehicles/{vehicleId}/telemetry`
+`https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/telemetry`
 
 </td></tr><tr><td>
 
@@ -45,14 +45,14 @@ Retrieves historical telemetry records for a vehicle over a specified time range
 90 days per request. Use pagination for longer periods.
 
 </td></tr></tbody>
-</table>## Authentication { .section}
+</table>## Authentication &#123; .section&#125;
 
 ```
-Authorization: Bearer {access_token}
-X-Tenant-ID: {tenant_id}
+Authorization: Bearer &#123;access_token&#125;
+X-Tenant-ID: &#123;tenant_id&#125;
 ```
 
-## Query Parameters { .section}
+## Query Parameters &#123; .section&#125;
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
@@ -63,7 +63,7 @@ X-Tenant-ID: {tenant_id}
 |`page`|integer|No|Page number. Default: `1`.|
 |`limit`|integer|No|Records per page. Default: `500`. Max: `2000`.|
 
-## Sample Request { .section}
+## Sample Request &#123; .section&#125;
 
 ```
 GET /v1/vehicles/veh_X7K2M9P1/telemetry
@@ -78,12 +78,12 @@ X-Tenant-ID: tenant_abc123
 Accept: application/json
 ```
 
-## Sample Response — 200 OK { .section}
+## Sample Response — 200 OK &#123; .section&#125;
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "vehicle_id": "veh_X7K2M9P1",
     "vin": "1HGCM82633A004352",
     "from": "2026-04-29T00:00:00Z",
@@ -91,50 +91,50 @@ Accept: application/json
     "resolution": "1h",
     "metrics_returned": ["fuel_level", "engine_temp", "oil_pressure", "battery_voltage"],
     "records": [
-      {
+      &#123;
         "timestamp": "2026-04-29T00:00:00Z",
         "fuel_level_percent": 72,
         "engine_temp_celsius": 21,
         "oil_pressure_kpa": 280,
         "battery_voltage_v": 12.7
-      },
-      {
+      &#125;,
+      &#123;
         "timestamp": "2026-04-29T01:00:00Z",
         "fuel_level_percent": 71,
         "engine_temp_celsius": 88,
         "oil_pressure_kpa": 310,
         "battery_voltage_v": 14.1
-      },
-      {
+      &#125;,
+      &#123;
         "timestamp": "2026-04-29T02:00:00Z",
         "fuel_level_percent": 68,
         "engine_temp_celsius": 91,
         "oil_pressure_kpa": 275,
         "battery_voltage_v": 14.2
-      }
+      &#125;
     ],
-    "pagination": {
+    "pagination": &#123;
       "page": 1,
       "limit": 50,
       "total_records": 48,
       "total_pages": 1
-    },
+    &#125;,
     "anomalies_detected": [
-      {
+      &#123;
         "timestamp": "2026-04-29T01:00:00Z",
         "metric": "oil_pressure_kpa",
         "value": 310,
         "threshold": 300,
         "severity": "warning"
-      }
+      &#125;
     ]
-  },
+  &#125;,
   "request_id": "f6a7b8c9-d0e1-2345-fabc-456789012345",
   "timestamp": "2026-04-30T10:00:00Z"
-}
+&#125;
 ```
 
-## Error Codes { .section}
+## Error Codes &#123; .section&#125;
 
 |HTTP Status|Error Code|Description|Resolution|
 |-----------|----------|-----------|----------|
@@ -151,4 +151,5 @@ Accept: application/json
 [GET/POST Maintenance Alerts](ref-maintenance-alerts.md)
 
 [Task: Monitor Telemetry Trends](task-maintenance-monitor-trends.md)
+
 

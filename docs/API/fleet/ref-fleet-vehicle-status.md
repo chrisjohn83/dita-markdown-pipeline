@@ -1,8 +1,8 @@
-# GET /fleet/vehicles/\{vehicleId\}/status — Get Vehicle Status {#ref-fleet-vehicle-status .reference}
+# GET /fleet/vehicles/\&#123;vehicleId\&#125;/status — Get Vehicle Status &#123;#ref-fleet-vehicle-status .reference&#125;
 
 Returns the real-time operational status of a single vehicle, including location, connectivity, engine state, fuel/battery level, and door lock state.
 
-## Endpoint { .section}
+## Endpoint &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -18,7 +18,7 @@ Returns the real-time operational status of a single vehicle, including location
 
 </td><td>
 
-`https://api.connectedcar.io/v1/fleet/vehicles/{vehicleId}/status`
+`https://api.connectedcar.io/v1/fleet/vehicles/&#123;vehicleId&#125;/status`
 
 </td></tr><tr><td>
 
@@ -37,20 +37,20 @@ Returns the real-time operational status of a single vehicle, including location
 300 requests / minute per tenant
 
 </td></tr></tbody>
-</table>## Authentication { .section}
+</table>## Authentication &#123; .section&#125;
 
 ```
-Authorization: Bearer {access_token}
-X-Tenant-ID: {tenant_id}
+Authorization: Bearer &#123;access_token&#125;
+X-Tenant-ID: &#123;tenant_id&#125;
 ```
 
-## Path Parameters { .section}
+## Path Parameters &#123; .section&#125;
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
 |`vehicleId`|string|Yes|Unique platform vehicle identifier \(e.g., `veh_X7K2M9P1`\).|
 
-## Sample Request { .section}
+## Sample Request &#123; .section&#125;
 
 ```
 GET /v1/fleet/vehicles/veh_X7K2M9P1/status HTTP/1.1
@@ -61,22 +61,22 @@ X-Request-ID: a1b2c3d4-e5f6-7890-abcd-ef1234567890
 Accept: application/json
 ```
 
-## Sample Response — 200 OK { .section}
+## Sample Response — 200 OK &#123; .section&#125;
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "vehicle_id": "veh_X7K2M9P1",
     "vin": "1HGCM82633A004352",
     "timestamp": "2026-04-30T08:20:15Z",
     "operational_status": "active",
-    "engine": {
+    "engine": &#123;
       "state": "off",
       "runtime_hours": 1842.5,
       "coolant_temp_celsius": 22
-    },
-    "location": {
+    &#125;,
+    "location": &#123;
       "latitude": 37.7749,
       "longitude": -122.4194,
       "heading_degrees": 275,
@@ -84,40 +84,40 @@ Accept: application/json
       "altitude_m": 16,
       "address": "Market St, San Francisco, CA, USA",
       "geofence_status": "inside"
-    },
-    "fuel": {
+    &#125;,
+    "fuel": &#123;
       "level_percent": 68,
       "range_km": 412,
       "type": "petrol"
-    },
-    "battery": {
+    &#125;,
+    "battery": &#123;
       "voltage_v": 12.7,
       "health_percent": 92,
       "charging": false
-    },
-    "doors": {
+    &#125;,
+    "doors": &#123;
       "locked": true,
       "front_left": "closed",
       "front_right": "closed",
       "rear_left": "closed",
       "rear_right": "closed",
       "trunk": "closed"
-    },
-    "connectivity": {
+    &#125;,
+    "connectivity": &#123;
       "online": true,
       "signal_type": "5G",
       "signal_strength_dbm": -72,
       "last_heartbeat": "2026-04-30T08:20:10Z"
-    },
+    &#125;,
     "odometer_km": 24315,
     "alerts_active": 0
-  },
+  &#125;,
   "request_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "timestamp": "2026-04-30T08:20:15Z"
-}
+&#125;
 ```
 
-## Error Codes { .section}
+## Error Codes &#123; .section&#125;
 
 |HTTP Status|Error Code|Description|Resolution|
 |-----------|----------|-----------|----------|
@@ -131,4 +131,5 @@ Accept: application/json
 [List All Fleet Vehicles](ref-fleet-list-vehicles.md)
 
 [Fleet Group Management](ref-fleet-group-management.md)
+
 

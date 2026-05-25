@@ -1,8 +1,8 @@
-# GET /fleet/vehicles — List All Fleet Vehicles {#ref-fleet-list-vehicles .reference}
+# GET /fleet/vehicles — List All Fleet Vehicles &#123;#ref-fleet-list-vehicles .reference&#125;
 
 Retrieves a paginated list of all vehicles registered to the authenticated tenant's fleet, with optional filters for status, group, and vehicle type.
 
-## Endpoint { .section}
+## Endpoint &#123; .section&#125;
 
 <table><tbody><tr><td>
 
@@ -37,16 +37,16 @@ Retrieves a paginated list of all vehicles registered to the authenticated tenan
 120 requests / minute per tenant
 
 </td></tr></tbody>
-</table>## Authentication { .section}
+</table>## Authentication &#123; .section&#125;
 
 ```
-Authorization: Bearer {access_token}
-X-Tenant-ID: {tenant_id}
+Authorization: Bearer &#123;access_token&#125;
+X-Tenant-ID: &#123;tenant_id&#125;
 ```
 
 See [API Authentication](../auth/ref-api-authentication.md) for token acquisition details.
 
-## Query Parameters { .section}
+## Query Parameters &#123; .section&#125;
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
@@ -56,7 +56,7 @@ See [API Authentication](../auth/ref-api-authentication.md) for token acquisitio
 |`limit`|integer|No|Records per page. Default: `50`. Max: `200`.|
 |`sort`|string|No|Sort field. Values: `vin`, `last_seen`, `status`. Default: `last_seen`.|
 
-## Sample Request { .section}
+## Sample Request &#123; .section&#125;
 
 ```
 GET /v1/fleet/vehicles?status=active&page=1&limit=3 HTTP/1.1
@@ -67,14 +67,14 @@ X-Request-ID: 7f3d9c2a-1b4e-4f8a-9d2c-3e5f7a1b9e4d
 Accept: application/json
 ```
 
-## Sample Response — 200 OK { .section}
+## Sample Response — 200 OK &#123; .section&#125;
 
 ```
-{
+&#123;
   "status": "success",
-  "data": {
+  "data": &#123;
     "vehicles": [
-      {
+      &#123;
         "vehicle_id": "veh_X7K2M9P1",
         "vin": "1HGCM82633A004352",
         "make": "Toyota",
@@ -84,18 +84,18 @@ Accept: application/json
         "group_id": "grp_fleet_north",
         "group_name": "North Region Fleet",
         "last_seen": "2026-04-30T08:14:22Z",
-        "location": {
+        "location": &#123;
           "latitude": 37.7749,
           "longitude": -122.4194,
           "address": "San Francisco, CA, USA"
-        },
-        "connectivity": {
+        &#125;,
+        "connectivity": &#123;
           "signal_type": "5G",
           "signal_strength_dbm": -72,
           "online": true
-        }
-      },
-      {
+        &#125;
+      &#125;,
+      &#123;
         "vehicle_id": "veh_A3N8Q5R7",
         "vin": "2T1BURHE0JC054321",
         "make": "Ford",
@@ -105,32 +105,32 @@ Accept: application/json
         "group_id": "grp_fleet_north",
         "group_name": "North Region Fleet",
         "last_seen": "2026-04-30T08:10:05Z",
-        "location": {
+        "location": &#123;
           "latitude": 37.3382,
           "longitude": -121.8863,
           "address": "San Jose, CA, USA"
-        },
-        "connectivity": {
+        &#125;,
+        "connectivity": &#123;
           "signal_type": "LTE",
           "signal_strength_dbm": -85,
           "online": true
-        }
-      }
+        &#125;
+      &#125;
     ],
-    "pagination": {
+    "pagination": &#123;
       "page": 1,
       "limit": 3,
       "total_records": 142,
       "total_pages": 48,
       "next_page": "/v1/fleet/vehicles?status=active&page=2&limit=3"
-    }
-  },
+    &#125;
+  &#125;,
   "request_id": "7f3d9c2a-1b4e-4f8a-9d2c-3e5f7a1b9e4d",
   "timestamp": "2026-04-30T08:15:00Z"
-}
+&#125;
 ```
 
-## Error Codes { .section}
+## Error Codes &#123; .section&#125;
 
 |HTTP Status|Error Code|Description|Resolution|
 |-----------|----------|-----------|----------|
@@ -148,4 +148,5 @@ Accept: application/json
 [Fleet Group Management](ref-fleet-group-management.md)
 
 [API Authentication](../auth/ref-api-authentication.md)
+
 
