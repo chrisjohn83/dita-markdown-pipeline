@@ -1,1 +1,0 @@
-oxy_webhelp_navlinks = {"tocId-d323e238":{"topics":[{"title":"Predictive Maintenance — API Reference","href":"maintenance\/ref-maintenance-telemetry.html","menu":{"hasChildren":true},"tocID":"tocId-d323e239","next":"tocId-d323e239"}]}};
