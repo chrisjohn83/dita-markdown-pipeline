@@ -5,8 +5,8 @@ const config = {
   title: 'Connected Car Docs',
   tagline: 'Connected Car Documentation',
 
-  url: 'https://example.com',
-  baseUrl: '/',
+  url: 'https://github.com/chrisjohn83/dita-markdown-pipeline',
+  baseUrl: '/dita-markdown-pipeline/',
 
   favicon: 'img/favicon.ico',
 
@@ -17,7 +17,7 @@ markdown: {
   },
 },
 
-  organizationName: 'github',
+  organizationName: 'chrisjohn83',
   projectName: 'dita-markdown-pipeline',
 
   presets: [
