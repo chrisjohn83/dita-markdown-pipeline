@@ -4,47 +4,46 @@ Retrieves a paginated list of all vehicles registered to the authenticated tenan
 
 ## Endpoint &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `GET`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/fleet/vehicles`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `fleet:read`
 
-</td></tr><tr><td>
+||
 
 **Rate Limit**
 
-</td><td>
+||
 
 120 requests / minute per tenant
 
-</td></tr></tbody>
-</table>## Authentication &#123; .section&#125;
+|
+## Authentication &#123; .section&#125;
 
 ```
 Authorization: Bearer &#123;access_token&#125;
 X-Tenant-ID: &#123;tenant_id&#125;
 ```
 
-See [API Authentication](../auth/ref-api-authentication.md) for token acquisition details.
 
 ## Query Parameters &#123; .section&#125;
 
@@ -147,6 +146,6 @@ Accept: application/json
 
 [Fleet Group Management](ref-fleet-group-management.md)
 
-[API Authentication](../auth/ref-api-authentication.md)
+
 
 

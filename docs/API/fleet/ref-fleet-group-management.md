@@ -4,32 +4,32 @@ Create fleet groups, assign vehicles to groups, and retrieve group details. Flee
 
 ## POST /fleet/groups — Create a Fleet Group &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `POST`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/fleet/groups`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `fleet:write`
 
-</td></tr></tbody>
-</table>**Authentication**
+|
+**Authentication**
 
 ```
 Authorization: Bearer &#123;access_token&#125;
@@ -86,32 +86,32 @@ X-Request-ID: b2c3d4e5-f6a7-8901-bcde-f12345678901
 
 ## PUT /fleet/vehicles/\&#123;vehicleId\&#125;/group — Assign Vehicle to Group &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `PUT`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/fleet/vehicles/&#123;vehicleId&#125;/group`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `fleet:write`
 
-</td></tr></tbody>
-</table>**Path Parameters**
+|
+**Path Parameters**
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
@@ -150,32 +150,32 @@ Content-Type: application/json
 
 ## GET /fleet/groups/\&#123;groupId\&#125;/vehicles — List Vehicles in Group &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `GET`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/fleet/groups/&#123;groupId&#125;/vehicles`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `fleet:read`
 
-</td></tr></tbody>
-</table>**Sample Request**
+|
+**Sample Request**
 
 ```
 GET /v1/fleet/groups/grp_fleet_north/vehicles?page=1&limit=5 HTTP/1.1
@@ -218,5 +218,6 @@ X-Tenant-ID: tenant_abc123
 [List All Fleet Vehicles](ref-fleet-list-vehicles.md)
 
 [Task: Monitor Fleet Vehicles](task-fleet-monitor-vehicles.md)
+
 
 

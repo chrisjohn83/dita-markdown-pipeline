@@ -4,40 +4,40 @@ Returns the real-time operational status of a single vehicle, including location
 
 ## Endpoint &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `GET`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/fleet/vehicles/&#123;vehicleId&#125;/status`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `fleet:read`
 
-</td></tr><tr><td>
+||
 
 **Rate Limit**
 
-</td><td>
+||
 
 300 requests / minute per tenant
 
-</td></tr></tbody>
-</table>## Authentication &#123; .section&#125;
+|
+## Authentication &#123; .section&#125;
 
 ```
 Authorization: Bearer &#123;access_token&#125;
@@ -131,5 +131,6 @@ Accept: application/json
 [List All Fleet Vehicles](ref-fleet-list-vehicles.md)
 
 [Fleet Group Management](ref-fleet-group-management.md)
+
 
 

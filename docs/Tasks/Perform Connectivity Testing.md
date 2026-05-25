@@ -18,32 +18,32 @@ Connectivity testing validates that a vehicle's wireless modules perform correct
 
 3.  Select the test type to initiate.
 
-<table id="choicetable_jz3_xlj_cjc"><tbody><tr><td id="d3478e85">
+|
 
 **RF Test**
 
-</td><td>
+||
 
 Validates signal strength, frequency accuracy, and emission levels.
 
-</td></tr><tr><td id="d3478e94">
+||
 
 **Protocol Test**
 
-</td><td>
+||
 
 Verifies MQTT, HTTP, and gRPC communication conformance and reliability.
 
-</td></tr><tr><td id="d3478e103">
+||
 
 **Full Connectivity Suite**
 
-</td><td>
+||
 
 Runs both RF and protocol tests sequentially in a single session.
 
-</td></tr></tbody>
-</table>4.  Configure the simulated network conditions.
+|
+4.  Configure the simulated network conditions.
 
     1.  Select the network type: **5G NR**, **LTE**, or **Satellite \(NR-NTN\)**.
 
@@ -74,10 +74,8 @@ Device connectivity is validated across the selected network scenarios. A test r
 **Related information**  
 
 
-[Solution Capabilities Overview](../../dita/concepts/concept-features.md)
 
-[Supported Technologies](../../dita/reference/ref-technologies.md)
 
-[Troubleshooting Guide](../../dita/reference/ref-troubleshooting.md)
+
 
 

@@ -4,48 +4,48 @@ Returns a composite predictive health score for the vehicle, derived from teleme
 
 ## Endpoint &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `GET`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/health`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `telemetry:read`
 
-</td></tr><tr><td>
+||
 
 **Rate Limit**
 
-</td><td>
+||
 
 60 requests / minute per tenant
 
-</td></tr><tr><td>
+||
 
 **Score Refresh**
 
-</td><td>
+||
 
 Health scores are recalculated every 4 hours from rolling telemetry data.
 
-</td></tr></tbody>
-</table>## Authentication &#123; .section&#125;
+|
+## Authentication &#123; .section&#125;
 
 ```
 Authorization: Bearer &#123;access_token&#125;
@@ -160,5 +160,6 @@ Accept: application/json
 [GET/POST Maintenance Alerts](ref-maintenance-alerts.md)
 
 [Task: Monitor Telemetry Trends](task-maintenance-monitor-trends.md)
+
 
 

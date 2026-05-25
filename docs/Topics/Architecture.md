@@ -47,8 +47,7 @@ Layer 6 — API Gateway and User Applications
 **Related information**  
 
 
-[Platform Data Flow](../../dita/concepts/concept-dataflow.md)
 
-[Supported Technologies](../../dita/reference/ref-technologies.md)
+
 
 

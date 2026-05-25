@@ -39,8 +39,7 @@ Remote commands travel in the opposite direction through the same infrastructure
 **Related information**  
 
 
-[Platform Architecture Overview](../../dita/concepts/concept-architecture.md)
 
-[How to Execute Remote Commands](../../dita/tasks/task-remote-operations.md)
+
 
 

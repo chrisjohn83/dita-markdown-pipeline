@@ -4,32 +4,32 @@ Retrieve active maintenance alerts for a vehicle and create custom alert rules t
 
 ## GET /vehicles/\&#123;vehicleId\&#125;/alerts — List Active Alerts &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `GET`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/alerts`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `telemetry:read`
 
-</td></tr></tbody>
-</table>**Query Parameters**
+|
+**Query Parameters**
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
@@ -95,32 +95,32 @@ X-Tenant-ID: tenant_abc123
 
 ## POST /vehicles/\&#123;vehicleId\&#125;/alerts/rules — Create Alert Rule &#123; .section&#125;
 
-<table><tbody><tr><td>
+|
 
 **Method**
 
-</td><td>
+||
 
 `POST`
 
-</td></tr><tr><td>
+||
 
 **URI Path**
 
-</td><td>
+||
 
 `https://api.connectedcar.io/v1/vehicles/&#123;vehicleId&#125;/alerts/rules`
 
-</td></tr><tr><td>
+||
 
 **Auth Scope**
 
-</td><td>
+||
 
 `telemetry:write`
 
-</td></tr></tbody>
-</table>**Request Body Parameters**
+|
+**Request Body Parameters**
 
 |Field|Type|Required|Description|
 |-----|----|--------|-----------|
@@ -193,5 +193,6 @@ Content-Type: application/json
 [Get Vehicle Health Score](ref-maintenance-health-score.md)
 
 [Task: Configure Maintenance Alerts](task-maintenance-configure-alerts.md)
+
 
 

@@ -44,8 +44,7 @@ Moving from prototype validation to mass production introduces additional challe
 **Related information**  
 
 
-[Solution Capabilities](../dita/concepts/concept-features.md)
 
-[Supported Technologies](../dita/reference/ref-technologies.md)
+
 
 

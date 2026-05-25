@@ -4,7 +4,6 @@ Use the Fleet Management REST APIs to retrieve a live view of all vehicles in yo
 
 Before monitoring fleet vehicles via the API:
 
--   Obtain a valid access token with the `fleet:read` scope. See [API Authentication](../auth/ref-api-authentication.md).
 -   Note your `tenant_id` from the Admin console.
 -   Vehicles must be onboarded and in `active` status.
 
@@ -66,6 +65,6 @@ To organize vehicles by region or purpose, proceed to [Manage Fleet Groups](task
 
 [API: Get Vehicle Status](ref-fleet-vehicle-status.md)
 
-[API Authentication](../auth/ref-api-authentication.md)
+
 
 
