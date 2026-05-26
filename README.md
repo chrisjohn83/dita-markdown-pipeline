@@ -20,11 +20,14 @@ This repository is designed for:
 ### REST API Demonstration
 
 The project includes sample REST APIs to simulate connected vehicle operations such as:
-* Vehicle status retrieval
-* Remote vehicle commands
-* Driver profile access
-* Telemetry simulation
-* Notification events
+* Notification events- API Category	Description
+* Vehicle APIs - Retrieve simulated vehicle data
+* Remote Commands - Execute demo commands
+* Telemetry APIs - Access telemetry information
+* User APIs- Manage sample user profiles
+**Documentation location:**
+[docs/rest-apis/](https://chrisjohn83.github.io/dita-markdown-pipeline)
+
 
 ### MQTT Integration
 The prototype demonstrates MQTT-based communication patterns for:
@@ -32,6 +35,14 @@ The prototype demonstrates MQTT-based communication patterns for:
 * Real-time event subscriptions
 * Command acknowledgements
 * Event-driven workflows
+**Use Cases**
+* Subscribe to vehicle telemetry
+* Receive simulated alerts
+* Publish remote commands
+* Consume REST-triggered events through MQTT
+**Documentation location:**
+docs/mqtt/
+
 ### Developer Onboarding Guides
 Step-by-step onboarding instructions help developers:
 * Set up the local environment
@@ -39,6 +50,13 @@ Step-by-step onboarding instructions help developers:
 * Connect to MQTT brokers
 * Execute sample requests
 * Test integration workflows
+The prototype includes documentation for testing APIs using a developer portal or external API clients.
+Supported Activities
+* Generate sample access tokens
+* Execute REST requests
+* Validate API responses
+* Simulate MQTT events
+  
 ### API Testing Portal
 The documentation also explains how developers can use the prototype portal or API tools to:
 * Execute REST APIs
@@ -47,38 +65,6 @@ The documentation also explains how developers can use the prototype portal or A
 * Test MQTT events
 * Simulate connected vehicle behavior
 
-## REST API Documentation
-The REST API documentation explains available endpoints, request formats, and sample responses.
-**Example API Categories**
-* API Category	Description
-* Vehicle APIs	Retrieve simulated vehicle data
-* Remote Commands	Execute demo commands
-* Telemetry APIs	Access telemetry information
-* User APIs	Manage sample user profiles
-**Documentation location:**
-docs/rest-apis/
-
-## MQTT Documentation
-The MQTT documentation demonstrates how connected vehicle systems can exchange data using publish/subscribe messaging.
-Topics
-* vehicle/{vehicleId}/telemetry
-* vehicle/{vehicleId}/events
-* vehicle/{vehicleId}/commands
-**Use Cases**
-* Subscribe to vehicle telemetry
-* Receive simulated alerts
-* Publish remote commands
-* Consume REST-triggered events through MQTT
-**Documentation location:**
-docs/mqtt/
-## Developer Portal and API Testing
-The prototype includes documentation for testing APIs using a developer portal or external API clients.
-Supported Activities
-* Generate sample access tokens
-* Execute REST requests
-* Validate API responses
-* Simulate MQTT events
-  
 ## Tutorials
 The tutorials section contains guided examples for common prototype scenarios.
 **Examples include:**
