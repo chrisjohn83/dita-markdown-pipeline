@@ -1,41 +1,126 @@
-# Website
+# Connected Car Platform
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Welcome to the Connected Car Prototype documentation repository. This repository contains reference documentation, sample APIs, MQTT integration examples, onboarding guides, and developer resources created for demonstration and learning purposes.
 
-## Installation
+The project is intended as a prototype implementation to showcase how connected vehicle ecosystems can integrate REST APIs, MQTT messaging, and developer portals for vehicle communication workflows.
+The Connected Car Prototype demonstrates a simplified connected vehicle platform where developers can:
+* Explore connected car concepts
+* Test REST APIs
+* Publish and subscribe using MQTT
+* Simulate vehicle communication workflows
+* Understand cloud-to-vehicle integration patterns
+* Learn API and event-driven architectures
+This repository is designed for:
+* Developers
+* Automotive learners
+* IoT enthusiasts
+* Integration engineers
 
-```bash
-yarn
-```
+## Features
+### REST API Demonstration
 
-## Local Development
+The project includes sample REST APIs to simulate connected vehicle operations such as:
+* Vehicle status retrieval
+* Remote vehicle commands
+* Driver profile access
+* Telemetry simulation
+* Notification events
 
-```bash
-yarn start
-```
+### MQTT Integration
+The prototype demonstrates MQTT-based communication patterns for:
+* Vehicle telemetry publishing
+* Real-time event subscriptions
+* Command acknowledgements
+* Event-driven workflows
+### Developer Onboarding Guides
+Step-by-step onboarding instructions help developers:
+* Set up the local environment
+* Configure API credentials
+* Connect to MQTT brokers
+* Execute sample requests
+* Test integration workflows
+### API Testing Portal
+The documentation also explains how developers can use the prototype portal or API tools to:
+* Execute REST APIs
+* Validate request payloads
+* Inspect responses
+* Test MQTT events
+* Simulate connected vehicle behavior
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## REST API Documentation
+The REST API documentation explains available endpoints, request formats, and sample responses.
+**Example API Categories**
+* API Category	Description
+* Vehicle APIs	Retrieve simulated vehicle data
+* Remote Commands	Execute demo commands
+* Telemetry APIs	Access telemetry information
+* User APIs	Manage sample user profiles
+**Documentation location:**
+docs/rest-apis/
 
-## Build
+## MQTT Documentation
+The MQTT documentation demonstrates how connected vehicle systems can exchange data using publish/subscribe messaging.
+Topics
+* vehicle/{vehicleId}/telemetry
+* vehicle/{vehicleId}/events
+* vehicle/{vehicleId}/commands
+**Use Cases**
+* Subscribe to vehicle telemetry
+* Receive simulated alerts
+* Publish remote commands
+* Consume REST-triggered events through MQTT
+**Documentation location:**
+docs/mqtt/
+## Developer Portal and API Testing
+The prototype includes documentation for testing APIs using a developer portal or external API clients.
+Supported Activities
+* Generate sample access tokens
+* Execute REST requests
+* Validate API responses
+* Simulate MQTT events
+  
+## Tutorials
+The tutorials section contains guided examples for common prototype scenarios.
+**Examples include:**
+* Vehicle status retrieval
+* Remote command simulation
+* MQTT subscription setup
+* REST and MQTT integration workflows
+* API testing using Postman
+**Documentation location:**
+  docs/tutorials/
 
-```bash
-yarn build
-```
+## Troubleshooting
+Common troubleshooting topics include:
+* MQTT connection failures
+* Invalid API requests
+* Authentication configuration
+* Local environment setup
+* Broker subscription issues
+  ** Documentation location:**
+  docs/troubleshooting/
+## Limitations
+This project is a prototype and should not be considered a production-ready connected vehicle platform.
+The implementation may include:
+* Mock services
+* Simulated vehicle data
+* Simplified authentication
+* Limited scalability
+* Demo-only workflows
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Contributing
+Contributions and improvements are welcome.
+**Contribution Steps**
+1. Fork the repository
+2. Create a feature branch
+3. Update documentation or code
+4. Submit a pull request
 
-## Deployment
+## Intended Usage
+This repository is intended for:
+* Proof-of-concept implementations
+* Technical documentation practice
+* API and MQTT experimentation
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## License
+This prototype project is provided for educational and demonstration purposes only.
