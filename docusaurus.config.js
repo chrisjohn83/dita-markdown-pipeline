@@ -1,19 +1,9 @@
-module.exports = {
+const config = {
   title: 'Connected Car Docs',
-
   tagline: 'Connected Car Documentation',
 
   url: 'https://chrisjohn83.github.io',
-
   baseUrl: '/dita-markdown-pipeline/',
-
-  favicon: 'img/favicon.ico',
-
-  organizationName: 'chrisjohn83',
-
-  projectName: 'dita-markdown-pipeline',
-
-  trailingSlash: false,
 
   onBrokenLinks: 'warn',
 
@@ -23,12 +13,16 @@ module.exports = {
     },
   },
 
+  favicon: 'img/favicon.ico',
+
+  organizationName: 'chrisjohn83',
+  projectName: 'dita-markdown-pipeline',
+
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
-          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
 
@@ -37,7 +31,30 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
+
+  
+  themeConfig: {
+    navbar: {
+      title: 'Connected Car Docs',
+      items: [
+        {
+          to: '/docs/',
+          label: 'Documentation',
+          position: 'left',
+        },
+      ],
+    },
+
+    footer: {
+      style: 'dark',
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} Connected Car Docs`,
+    },
+
+  },
 };
+
+module.exports = config;

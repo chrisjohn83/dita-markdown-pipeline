@@ -1,0 +1,29 @@
+Search
+Add Algolia DocSearch
+OR local search plugin
+Versioning
+Multiple documentation releases
+Automotive software versions
+Audience-specific docs
+Developer
+Tester
+Service Engineer
+End User
+DITA automation
+Auto-convert DITA → Markdown in GitHub Actions
+Fully automated publishing pipeline
+API enhancements
+OpenAPI/Swagger rendering
+Interactive API testing
+Better navigation
+Custom sidebar ordering
+Category landing pages
+Styling
+Automotive branding/theme
+Company logo
+Dark mode customization
+Deployment targets
+Netlify
+Vercel
+Internal enterprise server
+AWS S3 + CloudFront
