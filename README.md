@@ -10,6 +10,7 @@ The Connected Car Prototype demonstrates a simplified connected vehicle platform
 * Simulate vehicle communication workflows
 * Understand cloud-to-vehicle integration patterns
 * Learn API and event-driven architectures
+  
 This repository is designed for:
 * Developers
 * Automotive learners
@@ -41,6 +42,7 @@ The prototype demonstrates MQTT-based communication patterns for:
 * Receive simulated alerts
 * Publish remote commands
 * Consume REST-triggered events through MQTT
+  
 **Documentation location:**
 docs/mqtt/
 
@@ -52,6 +54,7 @@ Step-by-step onboarding instructions help developers:
 * Execute sample requests
 * Test integration workflows
 The prototype includes documentation for testing APIs using a developer portal or external API clients.
+
 Supported Activities
 * Generate sample access tokens
 * Execute REST requests
@@ -68,12 +71,14 @@ The documentation also explains how developers can use the prototype portal or A
 
 ## Tutorials
 The tutorials section contains guided examples for common prototype scenarios.
+
 **Examples include:**
 * Vehicle status retrieval
 * Remote command simulation
 * MQTT subscription setup
 * REST and MQTT integration workflows
 * API testing using Postman
+  
 **Documentation location:**
   docs/tutorials/
 
@@ -84,10 +89,12 @@ Common troubleshooting topics include:
 * Authentication configuration
 * Local environment setup
 * Broker subscription issues
-  ** Documentation location:**
+  
+** Documentation location:**
   docs/troubleshooting/
 ## Limitations
 This project is a prototype and should not be considered a production-ready connected vehicle platform.
+
 The implementation may include:
 * Mock services
 * Simulated vehicle data
@@ -97,6 +104,7 @@ The implementation may include:
 
 ## Contributing
 Contributions and improvements are welcome.
+
 **Contribution Steps**
 1. Fork the repository
 2. Create a feature branch
