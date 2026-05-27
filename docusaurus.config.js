@@ -26,6 +26,15 @@ const config = {
     ],
   ],
 
+plugins: [
+  [
+    require.resolve('@easyops-cn/docusaurus-search-local'),
+    {
+      hashed: true,
+    },
+  ],
+],
+
   themeConfig: {
     navbar: {
       title: 'Connected Car Docs',
