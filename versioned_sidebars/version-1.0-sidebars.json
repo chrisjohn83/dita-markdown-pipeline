@@ -1,0 +1,22 @@
+{
+  "tutorialSidebar": [
+    "Topics/Overview",
+    "Topics/Architecture",
+    "Topics/Features",
+    {
+      "type": "category",
+      "label": "Fleet APIs",
+      "items": [
+        "API/fleet/ref-fleet-list-vehicles",
+        "API/fleet/ref-fleet-vehicle-status"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Tasks",
+      "items": [
+        "Tasks/Perform Connectivity Testing"
+      ]
+    }
+  ]
+}
