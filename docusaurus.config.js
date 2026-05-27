@@ -1,22 +1,15 @@
 const config = {
   title: 'Connected Car Docs',
   tagline: 'Connected Car Documentation',
+  favicon: 'img/favicon.ico',
 
   url: 'https://chrisjohn83.github.io',
   baseUrl: '/dita-markdown-pipeline/',
 
-  onBrokenLinks: 'warn',
-
-  markdown: {
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
-  },
-
-  favicon: 'img/favicon.ico',
-
   organizationName: 'chrisjohn83',
   projectName: 'dita-markdown-pipeline',
+
+  onBrokenLinks: 'warn',
 
   presets: [
     [
@@ -25,9 +18,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
-
         blog: false,
-
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -35,25 +26,27 @@ const config = {
     ],
   ],
 
-  
   themeConfig: {
     navbar: {
       title: 'Connected Car Docs',
       items: [
         {
-          to: '/docs/',
-          label: 'Documentation',
+          to: '/docs/Topics/Overview',
+          label: 'Overview',
+          position: 'left',
+        },
+        {
+          to: '/docs/Topics/Architecture',
+          label: 'Architecture',
+          position: 'left',
+        },
+        {
+          to: '/docs/API/fleet/ref-fleet-list-vehicles',
+          label: 'APIs',
           position: 'left',
         },
       ],
     },
-
-    footer: {
-      style: 'dark',
-      links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} Connected Car Docs`,
-    },
-
   },
 };
 
