@@ -1,6 +1,6 @@
 const config = {
-  title: 'Connected Car Docs',
-  tagline: 'Connected Car Documentation',
+  title: 'Connected Car Documentation',
+  tagline: 'Connected Car Docs',
   favicon: 'img/favicon.ico',
 
   url: 'https://chrisjohn83.github.io',
@@ -10,11 +10,12 @@ const config = {
   projectName: 'dita-markdown-pipeline',
 
   onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   presets: [
     [
       'classic',
-      {
+      ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
@@ -22,36 +23,43 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      }),
+    ],
+  ],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi',
+        docsPluginId: 'classic',
+        config: {
+          vehicleapi: {
+            specPath: 'openapi/vehicle-api.yaml',
+            outputDir: 'docs/api',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
       },
     ],
   ],
 
-plugins: [
-  [
-    require.resolve('@easyops-cn/docusaurus-search-local'),
-    {
-      hashed: true,
-    },
-  ],
-],
+  themes: ['docusaurus-theme-openapi-docs'],
 
   themeConfig: {
     navbar: {
       title: 'Connected Car Docs',
       items: [
         {
-          to: '/docs/Topics/Overview',
-          label: 'Overview',
+          to: '/docs/intro',
+          label: 'Documentation',
           position: 'left',
         },
         {
-          to: '/docs/Topics/Architecture',
-          label: 'Architecture',
-          position: 'left',
-        },
-        {
-          to: '/docs/API/fleet/ref-fleet-list-vehicles',
-          label: 'APIs',
+          to: '/docs/api',
+          label: 'API Reference',
           position: 'left',
         },
       ],

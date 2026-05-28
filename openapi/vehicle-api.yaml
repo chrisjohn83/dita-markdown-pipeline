@@ -1,0 +1,18 @@
+openapi: 3.0.0
+
+info:
+  title: Connected Car Vehicle API
+  version: 1.0.0
+  description: Vehicle management APIs
+
+servers:
+  - url: https://api.connectedcar.example.com
+
+paths:
+  /vehicles:
+    get:
+      summary: List Vehicles
+      description: Returns all registered vehicles
+      responses:
+        '200':
+          description: Successful response
