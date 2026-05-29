@@ -15,7 +15,7 @@ const config = {
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
@@ -23,7 +23,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
@@ -53,14 +53,20 @@ const config = {
       title: 'Connected Car Docs',
       items: [
         {
-          to: '/docs/intro',
-          label: 'Documentation',
+          type: 'doc',
+          docId: 'index',
           position: 'left',
+          label: 'Documentation',
         },
         {
           to: '/docs/api',
           label: 'API Reference',
           position: 'left',
+        },
+        {
+          href: 'https://github.com/chrisjohn83/dita-markdown-pipeline',
+          label: 'GitHub',
+          position: 'right',
         },
       ],
     },
